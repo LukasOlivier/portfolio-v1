@@ -1,0 +1,12 @@
+body {
+  background: #212428;
+
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/*# sourceMappingURL=screen.css.map */

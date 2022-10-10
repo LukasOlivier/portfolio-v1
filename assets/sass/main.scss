@@ -1,0 +1,167 @@
+$bold-font: Poppins, sans serif;
+@use 'typed';
+
+a {
+  color: white;
+  text-decoration: none;
+  font-family: $bold-font;
+}
+
+body {
+  font-family: $bold-font;
+  color: white;
+  background: #212428;
+
+  p {
+    line-height: 1.2rem;
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+main {
+
+
+  .home {
+    width: 40rem;
+    margin: 15rem auto 0 auto;
+
+    h1 {
+      margin-bottom: 0.5rem;
+      font-size: 5rem;
+    }
+
+    h2 {
+      @include typed.typed("Student applied computer science", "Video editor & Logo designer", "Musician", [.05, null, .02, null], (iterations: 1, end-on: "Student applied computer sience"));
+    }
+
+    button {
+      background: transparent;
+      color: white;
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      font-family: $bold-font;
+      margin-top: 2rem;
+      border: white solid 0.1rem;
+      box-shadow: inset 0 0 0 0 white;
+      transition: ease-in 0.4s;
+    }
+
+    button:hover {
+      box-shadow: inset 400px 0 0 0 white;
+      cursor: pointer;
+      color: black;
+    }
+
+
+  }
+
+  .projects {
+    width: 50%;
+    margin: 0 auto 0 auto;
+    margin-top: 30rem;
+
+    h2 {
+      margin-bottom: 3rem;
+      text-align: center;
+      font-size: 3rem;
+    }
+
+    h2::before {
+      content: ("");
+      padding: 0.5rem;
+      background: #4dc0ce;
+      height: 50%;
+      display: inline-block;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+      transform: translateX(-1rem);
+    }
+
+    article {
+      margin-bottom: 5rem;
+      padding: 2rem;
+      background: #323232;
+      max-height: 25rem;
+
+      .project-title {
+        margin-bottom: 1rem;
+
+        h1 {
+          margin-bottom: 0.5rem;
+          font-size: 2.5rem;
+        }
+
+        h3 {
+          font-size: 1.1rem;
+        }
+      }
+
+      &::before {
+        content: ("");
+        background: gray;
+        padding: 2rem 0.2rem;
+        position: absolute;
+        display: inline-block;
+        transform: translateX(-2rem);
+      }
+
+      .projects-description {
+        justify-content: space-between;
+        align-items: flex-start;
+
+        img {
+          height: 29rem;
+          width: 22rem;
+          transform: translate(2rem, -7.5rem);
+        }
+
+        div {
+          margin-right: 2rem;
+          width: 50%;
+          height: 20rem;
+          overflow: hidden;
+          word-wrap: break-word;
+          font-size: 1rem;
+          font-weight: 200;
+
+          p {
+            margin-bottom: 0.5rem;
+          }
+        }
+
+        aside {
+          .front-end::before{
+            content: ("🖥️");
+          }
+          .back-end::before{
+            content: ("⚙️");
+          }
+          p {
+            margin-bottom: 0;
+          }
+
+          a{
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            text-decoration: underline;
+          }
+          h3{
+            font-weight: bolder;
+            margin-bottom: 0.5rem;
+          }
+/*
+          li::before{
+            content: ("•");
+            margin-right: 0.5rem;
+          }
+
+ */
+        }
+      }
+    }
+  }
+}
