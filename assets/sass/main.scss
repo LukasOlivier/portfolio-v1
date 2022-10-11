@@ -7,10 +7,28 @@ a {
   font-family: $bold-font;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+#arrow-up {
+  position: fixed;
+  left: 95%;
+  bottom: 3%;
+  background: url("../media/arrow-up.png");
+  background-size: contain;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
 body {
   font-family: $bold-font;
   color: white;
   background: #212428;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
 
   p {
     line-height: 1.2rem;
@@ -24,9 +42,7 @@ body {
 }
 
 main {
-
-
-  .home {
+  #home {
     width: 40rem;
     margin: 15rem auto 0 auto;
 
@@ -59,7 +75,7 @@ main {
 
   }
 
-  .projects {
+  #projects {
     width: 50%;
     margin: 0 auto 0 auto;
     margin-top: 30rem;
@@ -83,12 +99,25 @@ main {
 
     article {
       margin-bottom: 5rem;
-      padding: 2rem;
       background: #323232;
       max-height: 25rem;
+      display: flex;
+      flex-direction: row;
 
-      .project-title {
-        margin-bottom: 1rem;
+      &::before {
+        content: ("");
+        background: gray;
+        padding: 2rem 0.2rem;
+        position: absolute;
+        display: inline-block;
+        transform: translateY(2rem);
+      }
+
+      section {
+        flex-direction: column;
+        display: flex;
+        width: 60%;
+        margin: 2rem;
 
         h1 {
           margin-bottom: 0.5rem;
@@ -97,69 +126,44 @@ main {
 
         h3 {
           font-size: 1.1rem;
-        }
-      }
-
-      &::before {
-        content: ("");
-        background: gray;
-        padding: 2rem 0.2rem;
-        position: absolute;
-        display: inline-block;
-        transform: translateX(-2rem);
-      }
-
-      .projects-description {
-        justify-content: space-between;
-        align-items: flex-start;
-
-        img {
-          height: 29rem;
-          width: 22rem;
-          transform: translate(2rem, -7.5rem);
+          margin-bottom: 1rem;
         }
 
-        div {
-          margin-right: 2rem;
-          width: 50%;
-          height: 20rem;
-          overflow: hidden;
-          word-wrap: break-word;
-          font-size: 1rem;
+        p {
+          font-size: 0.8rem;
           font-weight: 200;
+          line-height: 1.2rem;
+          margin-bottom: 0.5rem;
+        }
+      }
 
-          p {
-            margin-bottom: 0.5rem;
-          }
+      .project-image {
+        width: 40%;
+        background: url("../../images/monopoly.jpg");
+      }
+
+      aside {
+        font-size: 0.8rem;
+
+        .front-end::before {
+          content: ("🖥️");
         }
 
-        aside {
-          .front-end::before{
-            content: ("🖥️");
-          }
-          .back-end::before{
-            content: ("⚙️");
-          }
-          p {
-            margin-bottom: 0;
-          }
+        .back-end::before {
+          content: ("⚙️");
+        }
 
-          a{
-            display: inline-block;
-            margin-bottom: 0.5rem;
-            text-decoration: underline;
-          }
-          h3{
-            font-weight: bolder;
-            margin-bottom: 0.5rem;
-          }
-/*
-          li::before{
-            content: ("•");
-            margin-right: 0.5rem;
-          }
+        a {
+          display: inline-block;
+          margin-bottom: 0.5rem;
+          text-decoration: underline;
+        }
 
- */
+        h3 {
+          font-size: 0.9rem;
+          margin-top: 1rem;
+          font-weight: bold;
+          margin-bottom: 0.5rem;
         }
       }
     }

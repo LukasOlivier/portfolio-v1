@@ -5,10 +5,28 @@ a {
   font-family: Poppins, sans serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+#arrow-up {
+  position: fixed;
+  left: 95%;
+  bottom: 3%;
+  background: url("../media/arrow-up.png");
+  background-size: contain;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
 body {
   font-family: Poppins, sans serif;
   color: white;
   background: #212428;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
 }
 body p {
   line-height: 1.2rem;
@@ -20,15 +38,15 @@ body p {
   align-items: baseline;
 }
 
-main .home {
+main #home {
   width: 40rem;
   margin: 15rem auto 0 auto;
 }
-main .home h1 {
+main #home h1 {
   margin-bottom: 0.5rem;
   font-size: 5rem;
 }
-main .home h2::before {
+main #home h2::before {
   content: "​";
   content: "​"/"Student applied computer sience";
   alt: "Student applied computer sience";
@@ -193,7 +211,7 @@ main .home h2::before {
     alt: "Student applied computer sience";
   }
 }
-main .home h2::after {
+main #home h2::after {
   content: "​";
   position: relative;
   display: inline-block;
@@ -889,7 +907,7 @@ main .home h2::after {
     border-color: transparent;
   }
 }
-main .home button {
+main #home button {
   background: transparent;
   color: white;
   padding: 0.5rem 1rem 0.5rem 1rem;
@@ -899,22 +917,22 @@ main .home button {
   box-shadow: inset 0 0 0 0 white;
   transition: ease-in 0.4s;
 }
-main .home button:hover {
+main #home button:hover {
   box-shadow: inset 400px 0 0 0 white;
   cursor: pointer;
   color: black;
 }
-main .projects {
+main #projects {
   width: 50%;
   margin: 0 auto 0 auto;
   margin-top: 30rem;
 }
-main .projects h2 {
+main #projects h2 {
   margin-bottom: 3rem;
   text-align: center;
   font-size: 3rem;
 }
-main .projects h2::before {
+main #projects h2::before {
   content: "";
   padding: 0.5rem;
   background: #4dc0ce;
@@ -924,80 +942,68 @@ main .projects h2::before {
   vertical-align: middle;
   transform: translateX(-1rem);
 }
-main .projects article {
+main #projects article {
   margin-bottom: 5rem;
-  padding: 2rem;
   background: #323232;
   max-height: 25rem;
+  display: flex;
+  flex-direction: row;
 }
-main .projects article .project-title {
-  margin-bottom: 1rem;
-}
-main .projects article .project-title h1 {
-  margin-bottom: 0.5rem;
-  font-size: 2.5rem;
-}
-main .projects article .project-title h3 {
-  font-size: 1.1rem;
-}
-main .projects article::before {
+main #projects article::before {
   content: "";
   background: gray;
   padding: 2rem 0.2rem;
   position: absolute;
   display: inline-block;
-  transform: translateX(-2rem);
+  transform: translateY(2rem);
 }
-main .projects article .projects-description {
-  justify-content: space-between;
-  align-items: flex-start;
+main #projects article section {
+  flex-direction: column;
+  display: flex;
+  width: 60%;
+  margin: 2rem;
 }
-main .projects article .projects-description img {
-  height: 29rem;
-  width: 22rem;
-  transform: translate(2rem, -7.5rem);
+main #projects article section h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
 }
-main .projects article .projects-description div {
-  margin-right: 2rem;
-  width: 50%;
-  height: 20rem;
-  overflow: hidden;
-  word-wrap: break-word;
-  font-size: 1rem;
+main #projects article section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+main #projects article section p {
+  font-size: 0.8rem;
   font-weight: 200;
-}
-main .projects article .projects-description div p {
+  line-height: 1.2rem;
   margin-bottom: 0.5rem;
 }
-main .projects article .projects-description aside {
-  /*
-            li::before{
-              content: ("•");
-              margin-right: 0.5rem;
-            }
-
-   */
+main #projects article .project-image {
+  width: 40%;
+  background: url("../../images/monopoly.jpg");
 }
-main .projects article .projects-description aside .front-end::before {
+main #projects article aside {
+  font-size: 0.8rem;
+}
+main #projects article aside .front-end::before {
   content: "🖥️";
 }
-main .projects article .projects-description aside .back-end::before {
+main #projects article aside .back-end::before {
   content: "⚙️";
 }
-main .projects article .projects-description aside p {
-  margin-bottom: 0;
-}
-main .projects article .projects-description aside a {
+main #projects article aside a {
   display: inline-block;
   margin-bottom: 0.5rem;
   text-decoration: underline;
 }
-main .projects article .projects-description aside h3 {
-  font-weight: bolder;
+main #projects article aside h3 {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
 header {
+  flex: 1 0 auto;
   width: 80%;
   margin: 3rem auto 0 auto;
   display: flex;
