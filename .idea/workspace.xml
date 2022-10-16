@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b50af0b5-15e4-41bd-8cfb-523b3f21e1ac" name="Changes" comment="Added back to top anchor and changed project article layout">
-      <change afterPath="$PROJECT_DIR$/assets/media/github.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/media/instagram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/media/linkedin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/media/mail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/media/phone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/screen.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/screen.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/screen.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/screen.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

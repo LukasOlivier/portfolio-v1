@@ -123,7 +123,7 @@ main {
       section {
         flex-direction: column;
         display: flex;
-        width: 60%;
+        flex: 1 0 80%;
         margin: 2rem;
 
         h1 {
@@ -138,8 +138,9 @@ main {
       }
 
       .project-image {
-        width: 40%;
-        background: url("../../images/monopoly.jpg");
+        flex: 0 1 20%;
+        background-image: url("../../images/monopoly.jpg");
+        background-size: cover;
       }
 
       aside {
