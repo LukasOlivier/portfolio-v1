@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b50af0b5-15e4-41bd-8cfb-523b3f21e1ac" name="Changes" comment="Added back to top anchor and changed project article layout">
+      <change afterPath="$PROJECT_DIR$/assets/media/github.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/media/instagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/media/linkedin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/media/mail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/media/phone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/screen.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/screen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/screen.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/screen.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/test.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Reset" />
+        <option value="CSS File" />
+        <option value="SCSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2FvtBfbZinIPSHCCH2PABSuO3MV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/Documenten/SCHOOL/TI - 2022-2023/Web Technology/Week4 - Closures/04-closures-modules" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\luksk\Desktop\portfolio\assets\media" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\luksk\Desktop\portfolio\assets\sass" />
+      <recent name="C:\Users\luksk\Desktop\portfolio" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b50af0b5-15e4-41bd-8cfb-523b3f21e1ac" name="Changes" comment="" />
+      <created>1665384252149</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665384252149</updated>
+      <workItem from="1665384253356" duration="2947000" />
+      <workItem from="1665393551191" duration="1379000" />
+      <workItem from="1665397698756" duration="3519000" />
+      <workItem from="1665401791797" duration="2635000" />
+      <workItem from="1665420763225" duration="5280000" />
+      <workItem from="1665467972168" duration="122000" />
+      <workItem from="1665468136074" duration="3362000" />
+      <workItem from="1665473442156" duration="7459000" />
+      <workItem from="1665561345510" duration="594000" />
+      <workItem from="1665571396790" duration="19000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added back to top anchor and changed project article layout">
+      <created>1665471478826</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665471478826</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Added back to top anchor and changed project article layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added back to top anchor and changed project article layout" />
+  </component>
+</project>

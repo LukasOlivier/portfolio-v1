@@ -5,8 +5,19 @@ a {
   font-family: Poppins, sans serif;
 }
 
+p {
+  font-size: 0.9rem;
+  font-weight: 200;
+  line-height: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+em {
+  font-weight: bold;
 }
 
 #arrow-up {
@@ -28,9 +39,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-body p {
-  line-height: 1.2rem;
-}
 
 .flex-container {
   display: flex;
@@ -38,15 +46,22 @@ body p {
   align-items: baseline;
 }
 
-main #home {
-  width: 40rem;
-  margin: 15rem auto 0 auto;
+main article {
+  margin-bottom: 5rem;
+  background: #323232;
+  max-height: 25rem;
+  display: flex;
+  flex-direction: row;
 }
-main #home h1 {
+main article #home {
+  margin: 15rem auto 0 auto;
+  width: 40rem;
+}
+main article #home h1 {
   margin-bottom: 0.5rem;
   font-size: 5rem;
 }
-main #home h2::before {
+main article #home h2::before {
   content: "​";
   content: "​"/"Student applied computer sience";
   alt: "Student applied computer sience";
@@ -211,7 +226,7 @@ main #home h2::before {
     alt: "Student applied computer sience";
   }
 }
-main #home h2::after {
+main article #home h2::after {
   content: "​";
   position: relative;
   display: inline-block;
@@ -907,7 +922,7 @@ main #home h2::after {
     border-color: transparent;
   }
 }
-main #home button {
+main article #home button {
   background: transparent;
   color: white;
   padding: 0.5rem 1rem 0.5rem 1rem;
@@ -917,22 +932,21 @@ main #home button {
   box-shadow: inset 0 0 0 0 white;
   transition: ease-in 0.4s;
 }
-main #home button:hover {
+main article #home button:hover {
   box-shadow: inset 400px 0 0 0 white;
   cursor: pointer;
   color: black;
 }
-main #projects {
-  width: 50%;
+main article #projects {
   margin: 0 auto 0 auto;
   margin-top: 30rem;
 }
-main #projects h2 {
+main article #projects h2 {
   margin-bottom: 3rem;
   text-align: center;
   font-size: 3rem;
 }
-main #projects h2::before {
+main article #projects h2::before {
   content: "";
   padding: 0.5rem;
   background: #4dc0ce;
@@ -942,14 +956,7 @@ main #projects h2::before {
   vertical-align: middle;
   transform: translateX(-1rem);
 }
-main #projects article {
-  margin-bottom: 5rem;
-  background: #323232;
-  max-height: 25rem;
-  display: flex;
-  flex-direction: row;
-}
-main #projects article::before {
+main article #projects::before {
   content: "";
   background: gray;
   padding: 2rem 0.2rem;
@@ -957,48 +964,90 @@ main #projects article::before {
   display: inline-block;
   transform: translateY(2rem);
 }
-main #projects article section {
+main article #projects section {
   flex-direction: column;
   display: flex;
   width: 60%;
   margin: 2rem;
 }
-main #projects article section h1 {
+main article #projects section h1 {
   margin-bottom: 0.5rem;
   font-size: 2.5rem;
 }
-main #projects article section h3 {
+main article #projects section h3 {
   font-size: 1.1rem;
   margin-bottom: 1rem;
 }
-main #projects article section p {
-  font-size: 0.8rem;
-  font-weight: 200;
-  line-height: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-main #projects article .project-image {
+main article #projects .project-image {
   width: 40%;
   background: url("../../images/monopoly.jpg");
 }
-main #projects article aside {
+main article #projects aside {
   font-size: 0.8rem;
 }
-main #projects article aside .front-end::before {
+main article #projects aside .front-end::before {
   content: "🖥️";
 }
-main #projects article aside .back-end::before {
+main article #projects aside .back-end::before {
   content: "⚙️";
 }
-main #projects article aside a {
+main article #projects aside a {
   display: inline-block;
   margin-bottom: 0.5rem;
   text-decoration: underline;
 }
-main #projects article aside h3 {
+main article #projects aside h3 {
   font-size: 0.9rem;
   margin-top: 1rem;
   font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+main #about-me-contact {
+  margin: 0 auto 10rem auto;
+  width: 50%;
+}
+main #about-me-contact #about-me {
+  max-width: 50%;
+  min-height: 100%;
+}
+main #about-me-contact h2 {
+  font-size: 2rem;
+  margin: 2rem 2rem 0.5rem 2rem;
+}
+main #about-me-contact p {
+  font-weight: 200;
+  margin: 0 2rem 0 2rem;
+}
+main #about-me-contact li {
+  padding: 0.1rem;
+  font-size: 1rem;
+  font-weight: 200;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 1.2rem;
+  padding-left: 1.5rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+main #about-me-contact #mail {
+  background-image: url("../media/mail.png");
+}
+main #about-me-contact #phone {
+  background-image: url("../media/phone.png");
+}
+main #about-me-contact #linkedin {
+  background-image: url("../media/linkedin.png");
+}
+main #about-me-contact #instagram {
+  background-image: url("../media/instagram.png");
+}
+main #about-me-contact #github {
+  background-image: url("../media/github.png");
+}
+main #about-me-contact #contact {
+  border-left: gray solid 0.1rem;
+}
+main #about-me-contact #contact p {
   margin-bottom: 0.5rem;
 }
 
