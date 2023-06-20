@@ -1,0 +1,36 @@
+@media screen and (max-width: 60rem) {
+  #about-me {
+    display: flex !important;
+    flex-direction: column !important;
+
+    img {
+      display: none !important;
+    }
+    div {
+      width: 100% !important;
+    }
+  }
+  footer {
+    margin-top: 0 !important;
+    img {
+      display: none !important;
+    }
+  }
+  div {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .shape {
+    display: none !important;
+  }
+
+  .project-container {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 150vh !important;
+    .project-item {
+      min-height: 20vh;
+    }
+  }
+}

@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <title>Lukas Olivier</title>
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/header.css" />
+    <link rel="stylesheet" href="/assets/css/footer.css" />
+    <link rel="stylesheet" href="/assets/css/sections.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,8 +25,11 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto:wght@500&display=swap"
       rel="stylesheet" />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <script src="assets/js/fade-in.js"></script>
     <script src="assets/js/typewriter.js" type="module"></script>
+    <script src="assets/js/animations.js" type="module" defer></script>
+    <script
+      src="https://kit.fontawesome.com/fba785f093.js"
+      crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
@@ -33,21 +39,50 @@
         <ul class="flex-container">
           <li><a href="#top">Home</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="">About me</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#about-me">About me</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <section id="home">
-        <h1>Lukas Olivier</h1>
-        <h2></h2>
-        <button>Get in touch!</button>
+        <h1 class="hidden animate-left">Lukas Olivier</h1>
+        <h2 class="hidden animate-left"></h2>
+        <button class="hidden animate-up">
+          <a href="https://beacons.ai/lukasolivier">Get in touch!</a>
+        </button>
+        <img
+          class="hidden animate-up shape"
+          src="images/pattern4.png"
+          alt="swiggle"
+          id="swiggle" />
+        <img
+          class="hidden animate-left shape"
+          src="images/pattern3.png"
+          alt="pattern"
+          id="pattern" />
       </section>
       <section id="projects">
-        <h1>My <br />Projects</h1>
+        <h1 class="hidden animate-up">My <br />Projects</h1>
         <div class="project-container">
-          <div class="project-item" id="monopoly">
+          <div class="project-item hidden animate-right" id="monopoly">
+            <p class="description">
+              PilsoPoly is a project I made for school. It is a Monopoly game in
+              the browser that communicates with a Java server. <br />
+              <br />
+              <a href="https://github.com/LukasOlivier/PilsoPoly-client"
+                >- Client Repo</a
+              >
+
+              <br />
+              <a href="https://github.com/LukasOlivier/PilsoPoly-server"
+                >- Server Repo</a
+              >
+              <br /><br />
+              <a href="#">- Live demo coming soon!</a>
+            </p>
+          </div>
+          <div class="project-item taller hidden animate-right">
             <p class="description">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Accusantium hic nobis esse aut, obcaecati eligendi consectetur,
@@ -55,7 +90,7 @@
               minima similique quo doloremque facere beatae?
             </p>
           </div>
-          <div class="project-item taller">
+          <div class="project-item hidden animate-right">
             <p class="description">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Accusantium hic nobis esse aut, obcaecati eligendi consectetur,
@@ -63,7 +98,32 @@
               minima similique quo doloremque facere beatae?
             </p>
           </div>
-          <div class="project-item">
+          <div id="pi" class="project-item taller hidden animate-right">
+            <p class="description">
+              I run all sorts of self hosted services on my Raspberry Pi. You
+              can find the list of services below.
+              <br /><br />
+
+              <a href="https://drive.lukasolivier.be">- File Storage</a> <br />
+              <br />
+
+              <a href="https://vault.lukasolivier.be">- Password Manager</a>
+              <br />
+              <br />
+
+              <a href="https://picsur.lukasolivier.be">- Image Hosting</a><br />
+              <br />
+
+              <a href="https://status.lukasolivier.be">- Uptime tracker</a>
+              <br /><br /><br /><br />
+
+              Read the blog post about it here: <br />
+              <br />
+
+              <a href="#">- Coming soon...</a>
+            </p>
+          </div>
+          <div class="project-item taller hidden animate-right">
             <p class="description">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Accusantium hic nobis esse aut, obcaecati eligendi consectetur,
@@ -71,27 +131,7 @@
               minima similique quo doloremque facere beatae?
             </p>
           </div>
-          <div id="pi" class="project-item taller">
-            <p class="description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium hic nobis esse aut, obcaecati eligendi consectetur,
-              pariatur, explicabo vel soluta enim eveniet excepturi inventore
-              minima similique quo doloremque facere beatae? Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Pariatur accusamus libero,
-              iste, ab voluptate at blanditiis, ducimus optio illo molestias
-              similique voluptates a deserunt quos. Ipsa corporis error
-              asperiores placeat?
-            </p>
-          </div>
-          <div class="project-item taller">
-            <p class="description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium hic nobis esse aut, obcaecati eligendi consectetur,
-              pariatur, explicabo vel soluta enim eveniet excepturi inventore
-              minima similique quo doloremque facere beatae?
-            </p>
-          </div>
-          <div class="project-item">
+          <div class="project-item hidden animate-right">
             <p class="description">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Accusantium hic nobis esse aut, obcaecati eligendi consectetur,
@@ -101,6 +141,72 @@
           </div>
         </div>
       </section>
+      <section id="about-me">
+        <div>
+          <h1 class="hidden animate-up">About me</h1>
+          <p class="hidden animate-left">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
+            tempora a, delectus ducimus ex eos consequuntur reiciendis impedit
+            exercitationem earum temporibus, autem cupiditate, laudantium nisi
+            soluta tempore? Provident, pariatur mollitia. Lorem, ipsum dolor sit
+            amet consectetur adipisicing elit. Sequi, soluta rerum possimus
+            adipisci, saepe impedit delectus officia quam libero debitis illo
+            consequuntur quaerat eum, sapiente dicta odio dolores nostrum
+            <br /><br />
+            architecto. Lorem ipsum, dolor sit amet consectetur adipisicing
+            elit. Sapiente velit sit reiciendis, officia culpa tempore ipsum
+            perferendis, maiores recusandae odio placeat omnis blanditiis iusto
+            repellat possimus dolor laborum? Debitis, provident.
+            <br /><br />
+            architecto. Lorem ipsum, dolor sit amet consectetur adipisicing
+            elit. Sapiente velit sit reiciendis, officia culpa tempore ipsum
+            perferendis, maiores recusandae odio placeat omnis blanditiis iusto
+            repellat possimus dolor laborum? Debitis, provident.
+          </p>
+        </div>
+        <img src="images/person.png" alt="person idea" />
+      </section>
     </main>
+    <footer id="contact">
+      <ul>
+        <li><h2>Thank you!</h2></li>
+        <li>
+          <p>This website is made with vanilla HTML,Javascript and SASS</p>
+        </li>
+        <li><p>Made using Visual Studio Code</p></li>
+        <li><p>Hosted on Combell</p></li>
+      </ul>
+      <img src="images/seperator.png" alt="seperator" />
+      <ul>
+        <li><h2>Contact:</h2></li>
+        <div>
+          <li class="fa-brands fa-linkedin">
+            <p>
+              <a href="https://www.linkedin.com/in/lukas-olivier-a19862231/"
+                >LukasOlivier</a
+              >
+            </p>
+          </li>
+          <li class="fa-brands fa-github">
+            <p><a href="https://github.com/LukasOlivier">LukasOlivier</a></p>
+          </li>
+          <li class="fa-brands fa-instagram">
+            <p>
+              <a href="https://www.instagram.com/lukasoli4/">LukasOli4</a>
+            </p>
+          </li>
+          <li class="fa-brands fa-facebook">
+            <p>
+              <a href="https://www.facebook.com/LukasOlivier2">LukasOlivier2</a>
+            </p>
+          </li>
+          <li class="fa-regular fa-envelope">
+            <p>
+              <a href="mailto:mail@lukasolivier.be ">mail@lukasolivier.be</a>
+            </p>
+          </li>
+        </div>
+      </ul>
+    </footer>
   </body>
 </html>

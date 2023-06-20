@@ -1,0 +1,298 @@
+a {
+  color: white;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: Poppins, sans serif;
+}
+
+* {
+  font-family: Poppins, sans serif;
+}
+
+p {
+  font-size: 0.9rem;
+  font-weight: 200;
+  line-height: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+em {
+  font-weight: bold;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Hide the scrollbar on WebKit-based browsers */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html ::-webkit-scrollbar {
+  width: 0.5em; /* Adjust the width as needed */
+}
+html ::-webkit-scrollbar-track {
+  background: transparent; /* Set the track background color */
+}
+html ::-webkit-scrollbar-thumb {
+  background: transparent; /* Set the scrollbar handle color */
+}
+html ::-webkit-scrollbar-thumb:hover {
+  background: transparent; /* Set the scrollbar handle color on hover */
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: Poppins, sans serif;
+  color: white;
+  background: #09192f;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.hidden.animate-left {
+  opacity: 0 !important;
+  transition: all 1s !important;
+  filter: blur(5px) !important;
+  transform: translateX(-100%) !important;
+}
+
+.show.animate-left {
+  opacity: 1 !important;
+  filter: blur(0px) !important;
+  transform: translateX(0%) !important;
+}
+
+.hidden.animate-right {
+  opacity: 0 !important;
+  transition: all 1s !important;
+  filter: blur(5px) !important;
+  transform: translateX(100%) !important;
+}
+
+.show.animate-right {
+  opacity: 1 !important;
+  filter: blur(0px) !important;
+  transform: translateX(0%) !important;
+}
+
+.hidden.animate-up {
+  opacity: 0 !important;
+  transition: all 1s !important;
+  filter: blur(5px) !important;
+  transform: translateY(-100%) !important;
+}
+
+.show.animate-up,
+.show.animate-down {
+  opacity: 1 !important;
+  filter: blur(0px) !important;
+  transform: translateY(0%) !important;
+}
+
+.hidden.animate-down {
+  opacity: 0 !important;
+  transition: all 1s !important;
+  filter: blur(5px) !important;
+  transform: translateY(100%) !important;
+}
+
+@media screen and (max-width: 60rem) {
+  #about-me {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  #about-me img {
+    display: none !important;
+  }
+  #about-me div {
+    width: 100% !important;
+  }
+  footer {
+    margin-top: 0 !important;
+  }
+  footer img {
+    display: none !important;
+  }
+  div {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .shape {
+    display: none !important;
+  }
+  .project-container {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 150vh !important;
+  }
+  .project-container .project-item {
+    min-height: 20vh;
+  }
+}
+main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section {
+  height: 100vh;
+}
+main #projects {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  justify-content: center;
+}
+main #projects h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  font-family: "Roboto", sans-serif;
+}
+main #projects .project-container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  height: 60vh;
+}
+main #projects .project-item {
+  position: relative;
+  overflow: hidden;
+  background-color: lightgray;
+  text-align: center;
+  border-radius: 0.2rem;
+  transition: background-image 0.5s ease-out;
+}
+main #projects .project-item a {
+  transition: font-weight 0.2s;
+  color: black;
+}
+main #projects .project-item a:hover {
+  font-weight: bold;
+}
+main #projects .project-item:hover {
+  background-image: none;
+}
+main #projects #pi {
+  color: #e3d6cd;
+  background-image: url("../../images/pi.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+main #projects #pi:hover {
+  background-image: none;
+}
+main #projects #monopoly {
+  background-image: url("../../images/monopoly.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%;
+}
+main #projects #monopoly:hover {
+  background-image: none;
+}
+main #projects .project-item .description {
+  background-color: lightgray;
+  color: black;
+  opacity: 0;
+  text-align: left;
+  transition: opacity 0.5s ease-out;
+  margin: 1rem;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+main #projects .project-item .description a {
+  font-weight: 350;
+}
+main #projects .project-item .description a:hover {
+  font-weight: bold;
+}
+main #projects .project-item:hover .description {
+  opacity: 1;
+}
+main #projects .taller {
+  grid-row-end: span 2;
+}
+main #home {
+  margin-top: 20vh;
+}
+main #home #swiggle {
+  position: absolute;
+  max-width: 20vw;
+  left: 0vw;
+  opacity: 0.2;
+}
+main #home #pattern {
+  position: absolute;
+  max-width: 30vw;
+  right: -20vw;
+  top: 40vh;
+  opacity: 0.8;
+  rotate: 40deg;
+}
+main #home h1 {
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+  font-family: "Roboto", sans-serif;
+}
+main #home h2 {
+  font-family: "Fira Code", monospace;
+}
+main #home button {
+  margin-top: 4rem;
+  border: white 1px solid;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 0.2rem;
+  background: linear-gradient(to right, white 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.2s ease-out;
+}
+main #home button:hover {
+  background-position: left bottom;
+  cursor: pointer;
+}
+main #home button:hover a {
+  color: #09192f;
+}
+main #about-me {
+  margin: auto;
+  margin-top: 40vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30vw, 30vw));
+  grid-gap: 10rem;
+  width: 70%;
+  justify-items: center;
+  align-items: center;
+}
+main #about-me div {
+  margin: 1rem;
+}
+main #about-me div h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+main #about-me div p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+main #about-me img {
+  max-width: 100%;
+}

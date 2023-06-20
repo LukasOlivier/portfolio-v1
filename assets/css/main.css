@@ -21,6 +21,7 @@ em {
 }
 
 html {
+  scroll-behavior: smooth;
   /* Hide the scrollbar on WebKit-based browsers */
   /* Track */
   /* Handle */
@@ -58,106 +59,49 @@ body {
   align-items: baseline;
 }
 
-main {
-  flex: 1 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.hidden.animate-left {
+  opacity: 0 !important;
+  transition: all 1s !important;
+  filter: blur(5px) !important;
+  transform: translateX(-100%) !important;
 }
-main #projects {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100vh;
-  justify-content: center;
+
+.show.animate-left {
+  opacity: 1 !important;
+  filter: blur(0px) !important;
+  transform: translateX(0%) !important;
 }
-main #projects h1 {
-  font-size: 4rem;
-  margin-bottom: 0.5rem;
-  font-family: "Roboto", sans-serif;
+
+.hidden.animate-right {
+  opacity: 0 !important;
+  transition: all 1s !important;
+  filter: blur(5px) !important;
+  transform: translateX(100%) !important;
 }
-main #projects .project-container {
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 1.5rem;
-  height: 60vh;
+
+.show.animate-right {
+  opacity: 1 !important;
+  filter: blur(0px) !important;
+  transform: translateX(0%) !important;
 }
-main #projects .project-item {
-  position: relative;
-  overflow: hidden;
-  background-color: lightgray;
-  text-align: center;
-  border-radius: 0.2rem;
-  transition: background-image 0.2s ease-out;
+
+.hidden.animate-up {
+  opacity: 0 !important;
+  transition: all 1s !important;
+  filter: blur(5px) !important;
+  transform: translateY(-100%) !important;
 }
-main #projects .project-item:hover {
-  background-image: none;
-  cursor: pointer;
+
+.show.animate-up,
+.show.animate-down {
+  opacity: 1 !important;
+  filter: blur(0px) !important;
+  transform: translateY(0%) !important;
 }
-main #projects #pi {
-  background-image: url("../../images/pi.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-size: 100% 100%;
-}
-main #projects #pi:hover {
-  background-image: none;
-  cursor: pointer;
-}
-main #projects #monopoly {
-  background-image: url("../../images/monopoly.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 60%;
-}
-main #projects #monopoly:hover {
-  background-image: none;
-  cursor: pointer;
-}
-main #projects .project-item .description {
-  background-color: lightgray;
-  color: black;
-  opacity: 0;
-  text-align: left;
-  transition: opacity 0.2s ease-out;
-  margin: 1rem;
-}
-main #projects .project-item:hover .description {
-  opacity: 1;
-}
-main #projects .taller {
-  grid-row-end: span 2;
-}
-main #home {
-  height: 100vh;
-  margin-top: 20vh;
-}
-main #home h1 {
-  font-size: 5rem;
-  margin-bottom: 0.5rem;
-  font-family: "Roboto", sans-serif;
-}
-main #home h2 {
-  font-family: "Fira Code", monospace;
-}
-main #home button {
-  margin-top: 4rem;
-  border: white 1px solid;
-  color: white;
-  padding: 0.5rem 2rem;
-  border-radius: 0.2rem;
-  background: linear-gradient(to right, white 50%, transparent 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all 0.2s ease-out;
-}
-main #home button:hover {
-  background-position: left bottom;
-  color: #09192f;
-  cursor: pointer;
+
+.hidden.animate-down {
+  opacity: 0 !important;
+  transition: all 1s !important;
+  filter: blur(5px) !important;
+  transform: translateY(100%) !important;
 }
