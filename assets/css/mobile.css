@@ -1,4 +1,13 @@
-@media screen and (max-width: 60rem) {
+@media only screen and (max-width: 60rem) {
+  #home h1 {
+    font-size: 3rem !important;
+  }
+  #home h2 {
+    font-size: 0.8rem !important;
+  }
+  header {
+    justify-content: center !important;
+  }
   #about-me {
     display: flex !important;
     flex-direction: column !important;
@@ -10,12 +19,12 @@
     width: 100% !important;
   }
   footer {
-    margin-top: 0 !important;
+    margin-top: 10vh !important;
   }
   footer img {
     display: none !important;
   }
-  div {
+  footer div {
     display: flex !important;
     flex-direction: column !important;
   }

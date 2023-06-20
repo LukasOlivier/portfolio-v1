@@ -72,17 +72,17 @@ body {
   transform: translateX(0%) !important;
 }
 
-.show.animate-right {
-  opacity: 1 !important;
-  filter: blur(0px) !important;
-  transform: translateX(0%) !important;
-}
-
 .hidden.animate-right {
   opacity: 0 !important;
   transition: all 1s !important;
   filter: blur(5px) !important;
   transform: translateX(100%) !important;
+}
+
+.show.animate-right {
+  opacity: 1 !important;
+  filter: blur(0px) !important;
+  transform: translateX(0%) !important;
 }
 
 .hidden.animate-up {
@@ -106,7 +106,16 @@ body {
   transform: translateY(100%) !important;
 }
 
-@media screen and (max-width: 60rem) {
+@media only screen and (max-width: 60rem) {
+  #home h1 {
+    font-size: 3rem !important;
+  }
+  #home h2 {
+    font-size: 0.8rem !important;
+  }
+  header {
+    justify-content: center !important;
+  }
   #about-me {
     display: flex !important;
     flex-direction: column !important;
@@ -118,12 +127,12 @@ body {
     width: 100% !important;
   }
   footer {
-    margin-top: 0 !important;
+    margin-top: 10vh !important;
   }
   footer img {
     display: none !important;
   }
-  div {
+  footer div {
     display: flex !important;
     flex-direction: column !important;
   }
