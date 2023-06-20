@@ -1,9 +1,13 @@
 $bold-font: Poppins, sans serif;
-@use 'typed';
 
 a {
   color: white;
   text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: $bold-font;
+}
+
+* {
   font-family: $bold-font;
 }
 
@@ -14,32 +18,43 @@ p {
   margin-bottom: 0.5rem;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 em {
   font-weight: bold;
 }
 
-#arrow-up {
-  position: fixed;
-  left: 95%;
-  bottom: 3%;
-  background: url("../media/arrow-up.png");
-  background-size: contain;
-  cursor: pointer;
-  width: 2.5rem;
-  height: 2.5rem;
+html {
+  /* Hide the scrollbar on WebKit-based browsers */
+  ::-webkit-scrollbar {
+    width: 0.5em; /* Adjust the width as needed */
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; /* Set the track background color */
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: transparent; /* Set the scrollbar handle color */
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: transparent; /* Set the scrollbar handle color on hover */
+  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
   font-family: $bold-font;
   color: white;
-  background: #212428;
-  scroll-behavior: smooth;
+  background: #09192f;
   display: flex;
   flex-direction: column;
+  scroll-behavior: smooth;
 }
 
 .flex-container {
@@ -49,183 +64,116 @@ body {
 }
 
 main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  article {
-    margin-bottom: 5rem;
-    background: #323232;
-    max-height: 25rem;
+  #projects {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+    justify-content: center;
 
-    #home {
-      margin: 15rem auto 0 auto;
-      width: 40rem;
-
-      h1 {
-        margin-bottom: 0.5rem;
-        font-size: 5rem;
-      }
-
-      h2 {
-        @include typed.typed("Student applied computer science", "Video editor & Logo designer", "Musician", [.05, null, .02, null], (iterations: 1, end-on: "Student applied computer sience"));
-      }
-
-      button {
-        background: transparent;
-        color: white;
-        padding: 0.5rem 1rem 0.5rem 1rem;
-        font-family: $bold-font;
-        margin-top: 2rem;
-        border: white solid 0.1rem;
-        box-shadow: inset 0 0 0 0 white;
-        transition: ease-in 0.4s;
-      }
-
-      button:hover {
-        box-shadow: inset 400px 0 0 0 white;
-        cursor: pointer;
-        color: black;
-      }
-
-
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
+      font-family: "Roboto", sans-serif;
     }
 
-    #projects {
-      margin: 0 auto 0 auto;
-      margin-top: 30rem;
+    .project-container {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 1.5rem;
+      height: 60vh;
+    }
 
-      h2 {
-        margin-bottom: 3rem;
-        text-align: center;
-        font-size: 3rem;
+    .project-item {
+      position: relative;
+      overflow: hidden;
+      background-color: lightgray;
+      text-align: center;
+      border-radius: 0.2rem;
+
+      transition: background-image 0.2s ease-out;
+
+      &:hover {
+        background-image: none;
+        cursor: pointer;
       }
+    }
 
-      h2::before {
-        content: ("");
-        padding: 0.5rem;
-        background: #4dc0ce;
-        height: 50%;
-        display: inline-block;
-        margin-right: 0.5rem;
-        vertical-align: middle;
-        transform: translateX(-1rem);
+    #pi {
+      background-image: url("../../images/pi.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-size: 100% 100%;
+      &:hover {
+        background-image: none;
+        cursor: pointer;
       }
-
-      &::before {
-        content: ("");
-        background: gray;
-        padding: 2rem 0.2rem;
-        position: absolute;
-        display: inline-block;
-        transform: translateY(2rem);
+    }
+    #monopoly {
+      background-image: url("../../images/monopoly.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 60%;
+      &:hover {
+        background-image: none;
+        cursor: pointer;
       }
+    }
 
-      section {
-        flex-direction: column;
-        display: flex;
-        flex: 1 0 80%;
-        margin: 2rem;
+    .project-item .description {
+      background-color: lightgray;
+      color: black;
+      opacity: 0;
+      text-align: left;
+      transition: opacity 0.2s ease-out;
+      margin: 1rem;
+    }
 
-        h1 {
-          margin-bottom: 0.5rem;
-          font-size: 2.5rem;
-        }
+    .project-item:hover .description {
+      opacity: 1;
+    }
 
-        h3 {
-          font-size: 1.1rem;
-          margin-bottom: 1rem;
-        }
-      }
-
-      .project-image {
-        flex: 0 1 20%;
-        background-image: url("../../images/monopoly.jpg");
-        background-size: cover;
-      }
-
-      aside {
-        font-size: 0.8rem;
-
-        .front-end::before {
-          content: ("🖥️");
-        }
-
-        .back-end::before {
-          content: ("⚙️");
-        }
-
-        a {
-          display: inline-block;
-          margin-bottom: 0.5rem;
-          text-decoration: underline;
-        }
-
-        h3 {
-          font-size: 0.9rem;
-          margin-top: 1rem;
-          font-weight: bold;
-          margin-bottom: 0.5rem;
-        }
-      }
+    .taller {
+      grid-row-end: span 2;
     }
   }
 
-  #about-me-contact {
-    margin: 0 auto 10rem auto;
-    width: 50%;
+  #home {
+    height: 100vh;
 
-    #about-me {
-      max-width: 50%;
-      min-height: 100%;
+    margin-top: 20vh;
+    h1 {
+      font-size: 5rem;
+      margin-bottom: 0.5rem;
+      font-family: "Roboto", sans-serif;
     }
-
     h2 {
-      font-size: 2rem;
-      margin: 2rem 2rem 0.5rem 2rem;
+      font-family: "Fira Code", monospace;
     }
-
-    p {
-      font-weight: 200;
-      margin: 0 2rem 0 2rem;
-    }
-
-    li{
-      padding: 0.1rem;
-      font-size: 1rem;
-      font-weight: 200;
-      background-position: left center;
-      background-repeat: no-repeat;
-      background-size: 1.2rem;
-      padding-left: 1.5rem;
-      margin-left: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    #mail {
-      background-image: url("../media/mail.png");
-    }
-
-    #phone {
-      background-image: url("../media/phone.png");
-    }
-
-    #linkedin {
-      background-image: url("../media/linkedin.png");
-    }
-
-    #instagram {
-      background-image: url("../media/instagram.png");
-    }
-
-    #github{
-      background-image: url("../media/github.png");
-    }
-
-    #contact {
-      border-left: gray solid 0.1rem;
-
-      p {
-        margin-bottom: 0.5rem;
+    button {
+      margin-top: 4rem;
+      border: white 1px solid;
+      color: white;
+      padding: 0.5rem 2rem;
+      border-radius: 0.2rem;
+      background: linear-gradient(to right, white 50%, transparent 50%);
+      background-size: 200% 100%;
+      background-position: right bottom;
+      transition: all 0.2s ease-out;
+      &:hover {
+        background-position: left bottom;
+        color: #09192f;
+        cursor: pointer;
       }
     }
   }

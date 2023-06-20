@@ -16,10 +16,6 @@ p {
   margin-bottom: 0.5rem;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 em {
   font-weight: bold;
 }
@@ -164,47 +160,4 @@ main #home button:hover {
   background-position: left bottom;
   color: #09192f;
   cursor: pointer;
-}
-
-header {
-  flex: 0 0 auto;
-  margin: 2.5rem 2rem 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  justify-content: end;
-}
-header #header-logo {
-  position: fixed;
-  left: 1.5rem;
-  top: 1.5em;
-  width: 2.5rem;
-}
-header h2 {
-  font-size: 2rem;
-  margin-right: 1.5rem;
-  background-position: center;
-}
-header h3 {
-  font-size: 1rem;
-  font-family: Poppins, sans serif;
-  font-weight: 200;
-  align-self: flex-end;
-}
-
-nav ul {
-  gap: 1.5rem;
-}
-nav a::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0.1rem;
-  transition: width 0.3s;
-  background: white;
-  margin-top: 0.2rem;
-}
-nav a:hover::after {
-  width: 100%;
 }

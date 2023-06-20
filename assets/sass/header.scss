@@ -1,28 +1,25 @@
 @use "main";
 
 header {
-  flex: 1 0 auto;
-
-  width: 80%;
-  margin: 3rem auto 0 auto;
+  flex: 0 0 auto;
+  margin: 2.5rem 2rem 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: baseline;
+  justify-content: end;
+
+  #header-logo {
+    position: fixed;
+    left: 1.5rem;
+    top: 1.5em;
+    width: 2.5rem;
+  }
 
   h2 {
     font-size: 2rem;
     margin-right: 1.5rem;
     background-position: center;
-  }
-
-  h2::before {
-    content: ("");
-    padding: 0.5rem;
-    background: gray;
-    height: 50%;
-    display: inline-block;
-    margin-right: 0.5rem;
-    vertical-align: middle;
   }
 
   h3 {
@@ -39,11 +36,11 @@ nav {
   }
 
   a::after {
-    content: '';
+    content: "";
     display: block;
     width: 0;
     height: 0.1rem;
-    transition: width .3s;
+    transition: width 0.3s;
     background: white;
     margin-top: 0.2rem;
   }
@@ -52,5 +49,3 @@ nav {
     width: 100%;
   }
 }
-
-
