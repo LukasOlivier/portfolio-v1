@@ -1,4 +1,10 @@
 @media only screen and (max-width: 60rem) {
+  section {
+    margin-bottom: 10rem !important;
+  }
+  #home {
+    min-height: 50vh !important;
+  }
   #home h1 {
     font-size: 3rem !important;
   }
@@ -12,7 +18,13 @@
     display: flex !important;
     flex-direction: column !important;
   }
-  #about-me img {
+  #about-me #skills {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-y: scroll !important;
+  }
+  #about-me #person-idea {
     display: none !important;
   }
   #about-me div {
@@ -21,12 +33,19 @@
   footer {
     margin-top: 10vh !important;
   }
-  footer img {
-    display: none !important;
+  footer .vertical-line {
+    width: 20rem !important;
+    height: 0.05rem !important;
   }
   footer div {
     display: flex !important;
     flex-direction: column !important;
+  }
+  footer ul div {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
   }
   .shape {
     display: none !important;

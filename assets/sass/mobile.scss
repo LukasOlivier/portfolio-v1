@@ -1,4 +1,7 @@
 @media only screen and (max-width: 60rem) {
+  section {
+    margin-bottom: 10rem !important;
+  }
   #home {
     h1 {
       font-size: 3rem !important;
@@ -6,6 +9,7 @@
     h2 {
       font-size: 0.8rem !important;
     }
+    min-height: 50vh !important;
   }
   header {
     justify-content: center !important;
@@ -14,7 +18,14 @@
     display: flex !important;
     flex-direction: column !important;
 
-    img {
+    #skills {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      overflow-y: scroll !important;
+    }
+
+    #person-idea {
       display: none !important;
     }
     div {
@@ -24,12 +35,20 @@
   footer {
     margin-top: 10vh !important;
 
-    img {
-      display: none !important;
+    .vertical-line {
+      width: 20rem !important;
+      height: 0.05rem !important;
     }
     div {
       display: flex !important;
       flex-direction: column !important;
+    }
+    ul div {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: wrap !important;
+
+      justify-content: space-between !important;
     }
   }
   .shape {

@@ -92,6 +92,20 @@ body {
   transform: translateY(-100%) !important;
 }
 
+.hidden.animate-down {
+  opacity: 0 !important;
+  transition: all 1s !important;
+  filter: blur(5px) !important;
+  transform: translateY(100%) !important;
+}
+
+.hidden.animate-up {
+  opacity: 0 !important;
+  transition: all 1s !important;
+  filter: blur(5px) !important;
+  transform: translateY(-100%) !important;
+}
+
 .show.animate-up,
 .show.animate-down {
   opacity: 1 !important;
@@ -99,11 +113,15 @@ body {
   transform: translateY(0%) !important;
 }
 
-.hidden.animate-down {
+.hidden.fade-in {
   opacity: 0 !important;
   transition: all 1s !important;
   filter: blur(5px) !important;
-  transform: translateY(100%) !important;
+}
+
+.show.fade-in {
+  opacity: 1 !important;
+  filter: blur(0px) !important;
 }
 
 @media only screen and (max-width: 60rem) {
@@ -120,7 +138,7 @@ body {
     display: flex !important;
     flex-direction: column !important;
   }
-  #about-me img {
+  #about-me #person-idea {
     display: none !important;
   }
   #about-me div {
@@ -148,41 +166,48 @@ body {
     min-height: 20vh;
   }
 }
-footer {
-  display: flex;
-  flex-direction: row;
+#contact {
   width: 100%;
-  align-items: start;
-  justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.411);
 }
-footer img {
-  max-width: 20rem;
-  margin: auto auto;
+
+#footer-content {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: space-between;
 }
-footer ul:last-of-type div {
+#footer-content .vertical-line {
+  width: 0.08rem;
+  height: 5rem;
+  background-color: rgba(255, 255, 255, 0.432);
+}
+#footer-content ul:last-of-type div {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 0rem 0.2rem;
 }
-footer ul {
+#footer-content ul {
   padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
 }
-footer ul li {
+#footer-content ul li {
   display: flex !important;
   flex-direction: row;
   align-items: baseline;
   margin-top: 0.5rem;
   color: rgb(138, 138, 138);
 }
-footer ul li h2 {
+#footer-content ul li h2 {
   color: white;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-footer ul li p {
+#footer-content ul li p {
   font-size: 1rem;
   padding-left: 0.3rem;
 }
