@@ -59,6 +59,10 @@ body {
   align-items: baseline;
 }
 
+.hidden {
+  opacity: 0 !important;
+}
+
 .hidden.animate-left {
   opacity: 0 !important;
   transition: all 1s !important;
@@ -122,4 +126,10 @@ body {
 .show.fade-in {
   opacity: 1 !important;
   filter: blur(0px) !important;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
 }

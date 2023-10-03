@@ -1,0 +1,76 @@
+#project-container {
+    width: 80%;
+    margin: 10rem auto;
+    h2 {
+        font-size: 4rem;
+    }
+}
+#swiggle {
+    position: absolute;
+    max-width: 20vw;
+
+    right: 20vw;
+    top: 10vw;
+    opacity: 0.2;
+}
+#pattern {
+    position: absolute;
+    max-width: 30vw;
+    right: -20vw;
+    top: 40vh;
+    opacity: 0.8;
+    rotate: 40deg;
+}
+
+.badge-container {
+    display: flex;
+    justify-content: space-between;
+
+    span:nth-child(2) {
+        margin-left: 0.5rem;
+    }
+}
+
+p a {
+    text-decoration: underline;
+    color: #00ccff;
+    margin-left: 0.4rem;
+}
+
+a.inline {
+    margin-left: 0rem;
+}
+
+form {
+    margin-top: 2rem;
+    legend {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    input {
+        width: 5rem;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        border-radius: 0.2rem;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.151);
+            cursor: pointer;
+        }
+    }
+    input.selected {
+        background-color: white;
+        border: 1px solid white;
+        color: black;
+        border-radius: 0.2rem;
+        &:hover {
+            background-color: rgb(228, 228, 228);
+            border: 1px solid rgb(228, 228, 228);
+            cursor: pointer;
+        }
+    }
+}
+
+.filtered-out {
+    display: none;
+}

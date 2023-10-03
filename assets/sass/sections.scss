@@ -52,77 +52,22 @@ main {
       background-color: lightgray;
       text-align: center;
       border-radius: 0.2rem;
-      a {
-        transition: font-weight 0.2s;
-
-        color: black;
-        &:hover {
-          font-weight: bold;
-        }
-      }
       &:hover {
-        background-image: none;
+        cursor: pointer;
+        transform: scale(1.05);
       }
     }
 
     #pi {
-      &:hover {
-        background-image: none;
-        h3 {
-          color: transparent;
-        }
-      }
       background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
-
-      &:hover {
-        background-image: none;
-      }
     }
 
     #tappd {
-      &:hover {
-        background-image: none;
-        h3 {
-          color: transparent;
-        }
-      }
       background-image: linear-gradient(90deg, #fad961 0%, #f76b1c 100%);
-
-      &:hover {
-        background-image: none;
-      }
     }
 
     #monopoly {
-      &:hover {
-        background-image: none;
-        h3 {
-          color: transparent;
-        }
-      }
       background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
-    }
-
-    .project-item .description {
-      height: 100%;
-      background-color: lightgray;
-      color: black;
-      opacity: 0;
-      text-align: left;
-      padding: 1rem;
-      transition: all 0.5s ease-in;
-      font-size: 1rem;
-      font-family: "Roboto", sans-serif;
-      a {
-        font-weight: 350;
-        &:hover {
-          font-weight: bold;
-        }
-      }
-    }
-
-    .project-item:hover .description {
-      opacity: 1;
     }
 
     .taller {

@@ -124,7 +124,19 @@ body {
   filter: blur(0px) !important;
 }
 
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
 @media only screen and (max-width: 60rem) {
+  section {
+    margin-bottom: 10rem !important;
+  }
+  #home {
+    min-height: 50vh !important;
+  }
   #home h1 {
     font-size: 3rem !important;
   }
@@ -138,6 +150,12 @@ body {
     display: flex !important;
     flex-direction: column !important;
   }
+  #about-me #skills {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-y: scroll !important;
+  }
   #about-me #person-idea {
     display: none !important;
   }
@@ -147,12 +165,19 @@ body {
   footer {
     margin-top: 10vh !important;
   }
-  footer img {
-    display: none !important;
+  footer .vertical-line {
+    width: 20rem !important;
+    height: 0.05rem !important;
   }
   footer div {
     display: flex !important;
     flex-direction: column !important;
+  }
+  footer ul div {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
   }
   .shape {
     display: none !important;

@@ -1,0 +1,333 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lukas Olivier</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/projects.css" />
+    <link rel="stylesheet" href="./assets/css/timeline.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto:wght@500&display=swap"
+      rel="stylesheet" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="assets/js/animations.js" type="module" defer></script>
+    <script src="assets/js/projects.js" type="module" defer></script>
+
+    <script
+      src="https://kit.fontawesome.com/fba785f093.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-icon-114x114.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-icon-120x120.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-icon-144x144.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-icon-152x152.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <header class="flex-container" id="top">
+      <nav>
+        <img id="header-logo" class="shape" src="images/logo.png" alt="logo" />
+        <ul class="flex-container">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about-me">About me</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <img
+      class="hidden animate-up shape"
+      src="images/pattern4.png"
+      alt="swiggle"
+      id="swiggle" />
+    <img
+      class="hidden animate-left shape"
+      src="images/pattern3.png"
+      alt="pattern"
+      id="pattern" />
+    <section id="project-container">
+      <h2>My Projects</h2>
+      <form action="#">
+        <legend>Filter:</legend>
+        <input
+          class="selected"
+          type="button"
+          name="school"
+          id="school-btn"
+          value="school" />
+        <input
+          class="selected"
+          type="button"
+          name="personal"
+          id="personal-btn"
+          value="personal" />
+      </form>
+      <div class="container">
+        <div class="timeline">
+          <div
+            class="timeline-container primary hidden animate-left"
+            id="tappd">
+            <div class="timeline-icon">
+              <i class="fa-brands fa-untappd"></i>
+            </div>
+            <div class="timeline-body">
+              <h4 class="timeline-title">
+                <div class="badge-container">
+                  <span class="badge">Tappd - Online ordering service</span>
+                  <span class="badge">Personal</span>
+                </div>
+              </h4>
+              <p>
+                Tappd is an online ordering service for bars and restaurants. It
+                allows customers to order their drinks and food without having
+                to wait for a waiter. <br />
+                <br />
+                The waiter receives the order on a tablet and can then serve the
+                customer. <br />
+                The owner can manage the menu and available tables. <br />
+                <br />
+
+                The client is made using vanilla HTML, CSS & JavaScript and the
+                server is made using Laravel. <br /><br />
+                <i class="fa-solid fa-gamepad" style="color: #ffffff"></i
+                ><a href="tappd-demo.lukasolivier.be">Try the demo</a
+                ><br /><br />
+
+                <img
+                  src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+                  alt="HTML5" />
+
+                <img
+                  src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
+                  alt="CSS3" />
+
+                <img
+                  src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
+                  alt="JavaScript" />
+                <img
+                  src="https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white"
+                  alt="laravel" />
+                <br />
+              </p>
+            </div>
+          </div>
+          <div
+            class="timeline-container success hidden animate-left"
+            id="monopoly">
+            <div class="timeline-icon">
+              <i class="fa-solid fa-money-bill"></i>
+            </div>
+            <div class="timeline-body">
+              <h4 class="timeline-title">
+                <div class="badge-container">
+                  <span class="badge"
+                    >Playable Monopoly Game in the browser</span
+                  >
+                  <span class="badge">School</span>
+                </div>
+              </h4>
+
+              <p>
+                PilsoPoly is a project I made for school. It is a fully
+                functional Monopoly game in the browser <br /><br />
+
+                The client is made using vanilla HTML, CSS & JavaScript and the
+                server is made using Java (VertX) RESTful API: . <br />
+                <br />
+
+                <i class="fa-brands fa-github" style="color: #ffffff"></i
+                ><a href="https://github.com/LukasOlivier/PilsoPoly-client"
+                  >View client repo</a
+                ><br />
+                <i class="fa-brands fa-github" style="color: #ffffff"></i
+                ><a href="https://github.com/LukasOlivier/PilsoPoly-server"
+                  >View server repo</a
+                >
+                <br /><br />
+                <img
+                  src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+                  alt="HTML5" />
+
+                <img
+                  src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
+                  alt="CSS3" />
+
+                <img
+                  src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
+                  alt="JavaScript" />
+                <img
+                  src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white"
+                  alt="Java" />
+              </p>
+            </div>
+          </div>
+          <div
+            class="timeline-container red hidden animate-left"
+            id="homeserver">
+            <div class="timeline-icon">
+              <i class="fa-brands fa-raspberry-pi"></i>
+            </div>
+            <div class="timeline-body">
+              <h4 class="timeline-title">
+                <div class="badge-container">
+                  <span class="badge">Raspberry Pi Home server</span>
+                  <span class="badge">Personal</span>
+                </div>
+              </h4>
+              <p class="description">
+                I run all sorts of self hosted services on my Raspberry Pi.
+                These are run using Docker containers and managed using
+                <a class="inline" href="https://www.portainer.io/">Portainer</a
+                >. Safely exposed to the internet using
+                <a
+                  class="inline"
+                  href="https://www.cloudflare.com/products/tunnel/"
+                  >Cloudflare Tunnels</a
+                >. <br /><br />
+                The server is running Ubuntu Server 20.04 LTS. <br /><br />
+                Services running:
+
+                <br />
+
+                <i class="fa-solid fa-cloud" style="color: #ffffff"></i
+                ><a href="https://drive.lukasolivier.be"
+                  >Nextcloud File Storage</a
+                >
+                <br />
+                <br />
+
+                <i class="fa-solid fa-vault" style="color: #ffffff"></i
+                ><a href="https://vault.lukasolivier.be"
+                  >Bitwarden Password Manager</a
+                >
+                <br />
+                <br />
+
+                <i class="fa-solid fa-image" style="color: #ffffff"></i
+                ><a href="https://picsur.lukasolivier.be"
+                  >Picsur Image Hosting</a
+                ><br />
+                <br />
+
+                <i class="fa-brands fa-untappd" style="color: #ffffff"></i
+                ><a href="https://tapp-demo.lukasolivier.be"
+                  >Tappd project mentioned earlier</a
+                ><br />
+                <br />
+
+                <img
+                  src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white"
+                  alt="Ubuntu" />
+                <img
+                  src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"
+                  alt="Docker" />
+                <img
+                  src="https://img.shields.io/badge/Nextcloud-039BE5?style=for-the-badge&logo=nextcloud&logoColor=white"
+                  alt="Nextcloud" />
+                <img
+                  src="https://img.shields.io/badge/Raspberry%20Pi-C51A4A?style=for-the-badge&logo=raspberry%20pi&logoColor=white"
+                  alt="Raspberry Pi" />
+                <img
+                  src="https://img.shields.io/badge/Bitwarden-175DDC?style=for-the-badge&logo=bitwarden&logoColor=white"
+                  alt="Bitwarden" />
+                <img
+                  src="https://img.shields.io/badge/Portainer-13BEF5?style=for-the-badge&logo=portainer&logoColor=white"
+                  alt="Portainer" />
+                <img
+                  src="https://img.shields.io/badge/Cloudflare-FFA500?style=for-the-badge&logo=cloudflare&logoColor=white"
+                  alt="Cloudflare" />
+              </p>
+            </div>
+          </div>
+          <div
+            class="timeline-container orange hidden animate-left"
+            id="monopoly">
+            <div class="timeline-icon">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div class="timeline-body">
+              <h4 class="timeline-title">
+                <div class="badge-container">
+                  <span class="badge">E-portfolio</span>
+                  <div class="badge-container">
+                    <span class="badge">School</span
+                    ><span class="badge">Personal</span>
+                  </div>
+                </div>
+              </h4>
+
+              <p>
+                This E-portfolio started out as a personal project but we needed
+                to expand it for school. <br /><br />
+                This website is made using vanilla HTML / JavaScript. I used
+                SASS to manage the CSS. <br />
+                <br />
+                The domain and hosting is provided by
+                <a class="inline" href="https://www.combell.com/">Combell</a>.
+                During my education I made use of
+                <a class="inline" href="www.academicsoftware.eu"
+                  >AcademicSoftware</a
+                >
+                to use this service for free. <br /><br />
+                <br />
+
+                <i class="fa-brands fa-github" style="color: #ffffff"></i
+                ><a href="https://github.com/LukasOlivier/portfolio"
+                  >View the source code</a
+                ><br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
