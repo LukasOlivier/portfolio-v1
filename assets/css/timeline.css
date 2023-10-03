@@ -4,6 +4,12 @@
   margin: 5rem 0;
   transform: scale(1.2) translate(7%, 7%);
 }
+@media (max-width: 767px) {
+  .container {
+    transform: scale(1) translate(0, 0);
+    margin: 2rem 0;
+  }
+}
 
 p {
   font-weight: 300;

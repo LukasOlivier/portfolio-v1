@@ -22,12 +22,25 @@
     rotate: 40deg;
 }
 
+@media screen and (max-width: 767px) {
+    .badge-container {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: flex-start !important;
+        row-gap: 1rem !important;
+        flex-wrap: wrap !important;
+        span:nth-child(1) {
+            // needs to take up the whole row
+            width: 100% !important;
+        }
+    }
+}
+
 .badge-container {
     display: flex;
     justify-content: space-between;
-
-    span:nth-child(2) {
-        margin-left: 0.5rem;
+    #exception {
+        margin-right: 0.5rem;
     }
 }
 
@@ -73,4 +86,7 @@ form {
 
 .filtered-out {
     display: none;
+}
+#project-container {
+    margin-bottom: 30vh;
 }
