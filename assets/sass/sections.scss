@@ -6,6 +6,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
   section {
     min-height: 80vh;
   }
@@ -45,8 +46,7 @@ main {
         width: 100%;
       }
     }
-
-
+  }
 
   #home {
     margin-top: 20vh;
@@ -60,10 +60,10 @@ main {
     #pattern {
       position: absolute;
       max-width: 30vw;
-      right: -20vw;
-      top: 40vh;
+      right: -10vw;
+      top: 20vh;
+      scale: 0.7;
       opacity: 0.8;
-      rotate: 40deg;
     }
     h1 {
       font-size: 5rem;
