@@ -3,6 +3,9 @@
     margin-bottom: 10rem !important;
   }
   #home {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     min-height: 50vh !important;
   }
   #home h1 {
@@ -20,7 +23,7 @@
   }
   #about-me #skills {
     display: flex !important;
-    flex-direction: row !important;
+    flex-direction: column !important;
     flex-wrap: nowrap !important;
   }
   #about-me #person-idea {
@@ -52,9 +55,19 @@
   .project-container {
     display: flex !important;
     flex-direction: column !important;
-    height: 150vh !important;
   }
   .project-container .project-item {
     min-height: 20vh;
   }
+}
+.container {
+  transform: translateX(-2rem) !important;
+}
+
+.timeline {
+  width: 92% !important;
+}
+
+.timeline-body {
+  transform: translateX(-1rem) !important;
 }/*# sourceMappingURL=mobile.css.map */

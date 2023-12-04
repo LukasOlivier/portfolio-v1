@@ -131,7 +131,7 @@ body {
   }
   #about-me #skills {
     display: flex !important;
-    flex-direction: row !important;
+    flex-direction: column !important;
     flex-wrap: nowrap !important;
   }
   #about-me #person-idea {
@@ -163,7 +163,6 @@ body {
   .project-container {
     display: flex !important;
     flex-direction: column !important;
-    height: 150vh !important;
   }
   .project-container .project-item {
     min-height: 20vh;

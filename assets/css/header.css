@@ -29,6 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .flex-container {
