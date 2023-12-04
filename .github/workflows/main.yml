@@ -1,0 +1,29 @@
+name: Deploy to Raspberry Pi
+
+on:
+  push:
+    branches:
+      - main  # Change this to your main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check SSH Connection
+        uses: appleboy/ssh-action@master
+        with:
+          host: '141.134.173.203'
+          username: 'raspberry'
+          port: '22'
+          key: "${{ secrets.SSH_KEY }}"
+          script: 'echo "SSH connection successful."'
+
+      - name: Deploy via SSH
+        uses: tiyee/action-ssh@v1.0.1
+        with:
+          command: 'shopt -s dotglob && rm -rf /home/raspberry/portfolio/website/* && cd /home/raspberry/portfolio/website && git clone https://github.com/LukasOlivier/portfolio.git . && docker compose up -d' 
+          host: '141.134.173.203'
+          username: 'raspberry'
+          port: '22'
+          privateKey: "${{ secrets.SSH_KEY }}"
