@@ -22,7 +22,7 @@ jobs:
       - name: Deploy via SSH
         uses: tiyee/action-ssh@v1.0.1
         with:
-          command: 'shopt -s dotglob && rm -rf /home/raspberry/portfolio/website/* && cd /home/raspberry/portfolio/website && git clone https://github.com/LukasOlivier/portfolio.git . && docker compose up -d'
+          command: 'shopt -s dotglob && rm -rf /home/raspberry/portfolio/website/* && cd /home/raspberry/portfolio/website && git clone https://github.com/LukasOlivier/portfolio.git . && docker stop portfolio && docker rm portfolio && docker compose up -d'
           host: '141.134.173.203'
           username: 'raspberry'
           port: '22'
