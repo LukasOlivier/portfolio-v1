@@ -7,7 +7,6 @@ services:
       - "5050:80"
     volumes:
       - ./index.html:/usr/share/nginx/html/index.html
-      - ./assets:/usr/share/nginx/html/assets
-      - ./pdf:/usr/share/nginx/html/pdf
-      - ./images:/usr/share/nginx/html/images
+      - ./:/usr/share/nginx/html/
+      
     container_name: portfolio
