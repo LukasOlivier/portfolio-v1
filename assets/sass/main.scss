@@ -24,30 +24,6 @@ em {
   font-weight: bold;
 }
 
-html {
-  scroll-behavior: smooth;
-  /* Hide the scrollbar on WebKit-based browsers */
-  ::-webkit-scrollbar {
-    width: 0.5em; /* Adjust the width as needed */
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: transparent; /* Set the track background color */
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: transparent; /* Set the scrollbar handle color */
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: transparent; /* Set the scrollbar handle color on hover */
-  }
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
 
 body {
   width: 100vw;
@@ -58,7 +34,6 @@ body {
   display: flex;
   flex-direction: column;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 .flex-container {

@@ -22,7 +22,6 @@
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
-    overflow-y: scroll !important;
   }
   #about-me #person-idea {
     display: none !important;
@@ -58,4 +57,4 @@
   .project-container .project-item {
     min-height: 20vh;
   }
-}
+}/*# sourceMappingURL=mobile.css.map */

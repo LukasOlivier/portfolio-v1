@@ -5,22 +5,6 @@
         font-size: 4rem;
     }
 }
-#swiggle {
-    position: absolute;
-    max-width: 20vw;
-
-    right: 20vw;
-    top: 10vw;
-    opacity: 0.2;
-}
-#pattern {
-    position: absolute;
-    max-width: 30vw;
-    right: -20vw;
-    top: 40vh;
-    opacity: 0.8;
-    rotate: 40deg;
-}
 
 @media screen and (max-width: 767px) {
     .badge-container {
