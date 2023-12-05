@@ -175,5 +175,11 @@ p {
                 background: orange !important;
             }
         }
+        &.yellow {
+            .badge,
+            .timeline-icon {
+                background: #fad02c !important;
+            }
+        }
     }
 }

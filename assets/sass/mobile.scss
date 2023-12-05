@@ -1,4 +1,16 @@
 @media only screen and (max-width: 60rem) {
+
+  .container{
+    transform: translateX(-2rem) !important;
+  }
+  .timeline{
+    width: 92% !important;
+  }
+  .timeline-body{
+    transform: translateX(-1rem) !important;
+  }
+  
+
   section {
     margin-bottom: 10rem !important;
   }
@@ -63,14 +75,5 @@
       min-height: 20vh;
     }
   }
-}
-.container{
-  transform: translateX(-2rem) !important;
-}
-.timeline{
-  width: 92% !important;
-}
-.timeline-body{
-  transform: translateX(-1rem) !important;
 }
 

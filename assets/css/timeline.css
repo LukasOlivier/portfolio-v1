@@ -123,4 +123,8 @@ p {
 .timeline .timeline-container.orange .badge,
 .timeline .timeline-container.orange .timeline-icon {
   background: orange !important;
+}
+.timeline .timeline-container.yellow .badge,
+.timeline .timeline-container.yellow .timeline-icon {
+  background: #fad02c !important;
 }/*# sourceMappingURL=timeline.css.map */

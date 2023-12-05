@@ -12,7 +12,6 @@ document.querySelectorAll("input").forEach((input) => {
 
     e.target.classList.toggle("selected");
     for (const item of SELECTED) {
-      console.log(item);
       filterProjects(item);
     }
   });
