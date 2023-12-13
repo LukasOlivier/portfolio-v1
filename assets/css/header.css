@@ -118,6 +118,9 @@ body {
   .timeline-body {
     transform: translateX(-1rem) !important;
   }
+  .timeline-container:hover {
+    box-shadow: none !important;
+  }
   section {
     margin-bottom: 10rem !important;
   }

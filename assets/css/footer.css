@@ -118,6 +118,9 @@ body {
   .timeline-body {
     transform: translateX(-1rem) !important;
   }
+  .timeline-container:hover {
+    box-shadow: none !important;
+  }
   section {
     margin-bottom: 10rem !important;
   }
@@ -182,7 +185,6 @@ body {
 #contact {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.411);
-  margin-top: 30rem;
 }
 
 #footer-content {

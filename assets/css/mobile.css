@@ -34,9 +34,10 @@
     flex-direction: column !important;
   }
   #about-me #skills {
-    display: flex !important;
-    flex-direction: column !important;
-    flex-wrap: nowrap !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-gap: 1rem !important;
+    margin-top: 2rem !important;
   }
   #about-me #person-idea {
     display: none !important;

@@ -119,6 +119,9 @@ body {
   .timeline-body {
     transform: translateX(-1rem) !important;
   }
+  .timeline-container:hover {
+    box-shadow: none !important;
+  }
   section {
     margin-bottom: 10rem !important;
   }
@@ -142,9 +145,10 @@ body {
     flex-direction: column !important;
   }
   #about-me #skills {
-    display: flex !important;
-    flex-direction: column !important;
-    flex-wrap: nowrap !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-gap: 1rem !important;
+    margin-top: 2rem !important;
   }
   #about-me #person-idea {
     display: none !important;
@@ -188,6 +192,11 @@ main {
 }
 main section {
   min-height: 80vh;
+}
+main #project-container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
 }
 main #projects {
   display: flex;
