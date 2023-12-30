@@ -106,4 +106,12 @@ body {
   display: flex;
   flex-direction: row;
   align-items: baseline;
+}
+
+.list {
+  list-style-type: disc;
+  margin-left: 1rem;
+}
+.list li {
+  margin-bottom: 0.5rem;
 }/*# sourceMappingURL=main.css.map */

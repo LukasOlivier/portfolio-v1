@@ -108,6 +108,14 @@ body {
   align-items: baseline;
 }
 
+.list {
+  list-style-type: disc;
+  margin-left: 1rem;
+}
+.list li {
+  margin-bottom: 0.5rem;
+}
+
 @media only screen and (max-width: 60rem) {
   .container {
     transform: translateX(-2rem) !important;
@@ -144,9 +152,10 @@ body {
     flex-direction: column !important;
   }
   #about-me #skills {
-    display: flex !important;
-    flex-direction: column !important;
-    flex-wrap: nowrap !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-gap: 1rem !important;
+    margin-top: 2rem !important;
   }
   #about-me #person-idea {
     display: none !important;

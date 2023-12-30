@@ -111,3 +111,12 @@ body {
   flex-direction: row;
   align-items: baseline;
 }
+
+.list{
+  // list with '-'
+  list-style-type: disc;
+  margin-left: 1rem;
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
