@@ -1,9 +1,20 @@
+let lastClickTime = 0;
+
 function toggleContent(e) {
   e.currentTarget.querySelector(".timeline-content").classList.toggle("hidden");
 }
 
 function handleItemClick(event) {
-  toggleContent(event);
+  const currentTime = new Date().getTime();
+  const timeDifference = currentTime - lastClickTime;
+
+  // Adjust the threshold (in milliseconds) as needed
+  const clickThreshold = 300; // Set to a suitable value
+
+  if (timeDifference > clickThreshold) {
+    toggleContent(event);
+    lastClickTime = currentTime;
+  }
 }
 
 function attachEventListeners() {
@@ -43,8 +54,6 @@ function checkMobileView() {
     restoreAosAttribute();
   }
 }
-
-
 
 // Initial check on page load
 checkMobileView();
