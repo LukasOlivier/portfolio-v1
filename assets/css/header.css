@@ -27,7 +27,7 @@ em {
 body {
   font-family: Poppins, sans serif;
   color: white;
-  background: linear-gradient(135deg, #001F3F, #003366);
+  background: linear-gradient(135deg, #001229, #001325);
   display: flex;
   flex-direction: column;
   scroll-behavior: smooth;
@@ -159,74 +159,71 @@ body {
 }
 @media only screen and (max-width: 60rem) {
   .container {
-    transform: translateX(-2rem) !important;
+    transform: translateX(-2rem);
   }
   .timeline {
-    width: 92% !important;
+    width: 92%;
   }
   .timeline-body {
-    transform: translateX(-1rem) !important;
+    transform: translateX(-1rem);
   }
   .timeline-container:hover {
-    box-shadow: none !important;
+    box-shadow: none;
   }
   section {
-    margin-bottom: 10rem !important;
+    margin-bottom: 10rem;
   }
   #home {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    min-height: 50vh !important;
+    min-height: 50vh;
   }
   #home h1 {
-    font-size: 3rem !important;
+    font-size: 3rem;
   }
   #home h2 {
-    font-size: 0.8rem !important;
+    font-size: 0.8rem;
   }
   header {
-    justify-content: center !important;
+    justify-content: center;
+  }
+  #skills i {
+    font-size: 0.5rem;
   }
   #about-me {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-  #about-me #skills {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    grid-gap: 1rem !important;
-    margin-top: 2rem !important;
+    display: flex;
+    flex-direction: column;
   }
   #about-me #person-idea {
-    display: none !important;
+    display: none;
   }
   #about-me div {
-    width: 100% !important;
+    width: 100%;
   }
   footer {
-    margin-top: 10vh !important;
+    margin-top: 10vh;
   }
   footer .vertical-line {
-    width: 20rem !important;
-    height: 0.05rem !important;
+    width: 20rem;
+    height: 0.05rem;
   }
   footer div {
-    display: flex !important;
-    flex-direction: column !important;
+    display: flex;
+    flex-direction: column;
   }
   footer ul div {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: space-between !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   .shape {
-    display: none !important;
+    display: none;
   }
   .project-container {
-    display: flex !important;
-    flex-direction: column !important;
+    display: flex;
+    flex-direction: column;
   }
   .project-container .project-item {
     min-height: 20vh;

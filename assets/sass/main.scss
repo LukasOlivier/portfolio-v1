@@ -45,69 +45,8 @@ body {
   flex-direction: row;
   align-items: baseline;
 }
-
-.hidden.animate-left {
-  opacity: 0 !important;
-  transition: all 1s !important;
-  filter: blur(5px) !important;
-  transform: translateX(-100%) !important;
-}
-
-.show.animate-left {
-  opacity: 1 !important;
-  filter: blur(0px) !important;
-  transform: translateX(0%) !important;
-}
-
-.hidden.animate-right {
-  opacity: 0 !important;
-  transition: all 1s !important;
-  filter: blur(5px) !important;
-  transform: translateX(100%) !important;
-}
-.show.animate-right {
-  opacity: 1 !important;
-  filter: blur(0px) !important;
-  transform: translateX(0%) !important;
-}
-
-.hidden.animate-up {
-  opacity: 0 !important;
-  transition: all 1s !important;
-  filter: blur(5px) !important;
-  transform: translateY(-100%) !important;
-}
-
-.hidden.animate-down {
-  opacity: 0 !important;
-  transition: all 1s !important;
-  filter: blur(5px) !important;
-  transform: translateY(100%) !important;
-}
-
-.hidden.animate-up {
-  opacity: 0 !important;
-  transition: all 1s !important;
-  filter: blur(5px) !important;
-  transform: translateY(-100%) !important;
-}
-
-.show.animate-up,
-.show.animate-down {
-  opacity: 1 !important;
-  filter: blur(0px) !important;
-  transform: translateY(0%) !important;
-}
-
-.hidden.fade-in {
-  opacity: 0 !important;
-  transition: all 1s !important;
-  filter: blur(5px) !important;
-}
-
-.show.fade-in {
-  opacity: 1 !important;
-  filter: blur(0px) !important;
+.hidden{
+  display: none;
 }
 
 .flex-container {

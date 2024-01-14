@@ -1,34 +1,39 @@
-const SELECTED = ["school", "personal"];
+function toggleContent(e) {
+  e.currentTarget.querySelector(".timeline-content").classList.toggle("hidden");
+}
 
-document.querySelectorAll("input").forEach((input) => {
-  input.addEventListener("click", (e) => {
-    clearProjects();
-    const filter = e.target.value.toLowerCase();
-    if (SELECTED.includes(filter)) {
-      SELECTED.splice(SELECTED.indexOf(filter), 1);
-    } else {
-      SELECTED.push(filter);
-    }
+function handleItemClick(event) {
+  toggleContent(event);
+}
 
-    e.target.classList.toggle("selected");
-    for (const item of SELECTED) {
-      filterProjects(item);
-    }
+function attachEventListeners() {
+  document.querySelectorAll(".timeline-content").forEach(item => {
+    item.classList.add("hidden");
   });
-});
-
-function clearProjects() {
-  const projects = document.querySelectorAll(".timeline-container");
-  projects.forEach((project) => {
-    project.classList.add("filtered-out");
+  document.querySelectorAll(".timeline-body").forEach(item => {
+    item.addEventListener("click", handleItemClick);
   });
 }
 
-function filterProjects(filter) {
-  const projects = document.querySelectorAll(".timeline-container");
-  projects.forEach((project) => {
-    if (project.innerHTML.toLowerCase().includes(filter)) {
-      project.classList.remove("filtered-out");
-    }
-  });
+function checkMobileView() {
+  // Set your mobile view threshold, e.g., 768 pixels
+  const mobileThreshold = 768;
+
+  if (window.innerWidth < mobileThreshold) {
+    attachEventListeners();
+  } else {
+    // Remove event listeners if not in mobile view
+    document.querySelectorAll(".timeline-content").forEach(item => {
+      item.classList.remove("hidden");
+    });
+    document.querySelectorAll(".timeline-body").forEach(item => {
+      item.removeEventListener("click", handleItemClick);
+    });
+  }
 }
+
+// Initial check on page load
+checkMobileView();
+
+// Listen for window resize events to update the functionality based on viewport width
+window.addEventListener("resize", checkMobileView);
