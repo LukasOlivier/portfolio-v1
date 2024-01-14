@@ -134,12 +134,38 @@ body {
   #about-me {
     display: flex;
     flex-direction: column;
+    width: 80%;
   }
   #about-me #person-idea {
     display: none;
   }
   #about-me div {
     width: 100%;
+  }
+  .vertical-line {
+    display: none;
+  }
+  #footer-content {
+    flex-direction: column;
+  }
+  #footer-content ul {
+    padding: 1rem 0rem;
+  }
+  #footer-content ul li {
+    display: flex !important;
+    flex-direction: row;
+    align-items: baseline;
+    margin-top: 0.5rem;
+    color: rgb(138, 138, 138);
+  }
+  #footer-content ul li h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  #footer-content ul li p {
+    font-size: 1rem;
+    padding-left: 0.3rem;
   }
   .shape {
     display: none;

@@ -1,15 +1,6 @@
 @media only screen and (max-width: 60rem) {
-  .container {
-    transform: translateX(-2rem);
-  }
-  .timeline {
-    width: 92%;
-  }
-  .timeline-body {
-    transform: translateX(-1rem);
-  }
-  .timeline-container:hover {
-    box-shadow: none;
+  #project-container {
+    width: 80% !important;
   }
   section {
     margin-bottom: 10rem;
@@ -35,6 +26,7 @@
   #about-me {
     display: flex;
     flex-direction: column;
+    width: 80% !important;
   }
   #about-me #person-idea {
     display: none;
