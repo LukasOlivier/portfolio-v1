@@ -42,22 +42,30 @@
   #about-me div {
     width: 100%;
   }
-  footer {
-    margin-top: 10vh;
+  .vertical-line {
+    display: none;
   }
-  footer .vertical-line {
-    width: 20rem;
-    height: 0.05rem;
-  }
-  footer div {
-    display: flex;
+  #footer-content {
     flex-direction: column;
   }
-  footer ul div {
-    display: flex;
+  #footer-content ul {
+    padding: 1rem 0rem;
+  }
+  #footer-content ul li {
+    display: flex !important;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 0.5rem;
+    color: rgb(138, 138, 138);
+  }
+  #footer-content ul li h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  #footer-content ul li p {
+    font-size: 1rem;
+    padding-left: 0.3rem;
   }
   .shape {
     display: none;

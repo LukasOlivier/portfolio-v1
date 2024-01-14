@@ -52,23 +52,29 @@
       width: 100%;
     }
   }
-  footer {
-    margin-top: 10vh;
-
-    .vertical-line {
-      width: 20rem;
-      height: 0.05rem;
-    }
-    div {
-      display: flex;
-      flex-direction: column;
-    }
-    ul div {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-
-      justify-content: space-between;
+  .vertical-line {
+    display: none;
+  }
+  #footer-content {
+    flex-direction: column;
+    ul {
+      padding: 1rem 0rem;
+      li {
+        display: flex !important;
+        flex-direction: row;
+        align-items: baseline;
+        margin-top: 0.5rem;
+        color: rgb(138, 138, 138);
+        h2 {
+          color: white;
+          font-size: 2rem;
+          margin-bottom: 1rem;
+        }
+        p {
+          font-size: 1rem;
+          padding-left: 0.3rem;
+        }
+      }
     }
   }
   .shape {
