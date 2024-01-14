@@ -15,22 +15,36 @@ function attachEventListeners() {
   });
 }
 
+function removeAosAttribute() {
+  const timelineContainers = document.querySelectorAll(".timeline-container");
+  timelineContainers.forEach(container => {
+    container.removeAttribute("data-aos");
+  });
+}
+
+function restoreAosAttribute() {
+  const timelineContainers = document.querySelectorAll(".timeline-container");
+  timelineContainers.forEach(container => {
+    container.setAttribute("data-aos", "fade-right");
+  });
+}
+
 function checkMobileView() {
   // Set your mobile view threshold, e.g., 768 pixels
   const mobileThreshold = 768;
 
   if (window.innerWidth < mobileThreshold) {
     attachEventListeners();
+    removeAosAttribute();
   } else {
-    // Remove event listeners if not in mobile view
-    document.querySelectorAll(".timeline-content").forEach(item => {
-      item.classList.remove("hidden");
-    });
     document.querySelectorAll(".timeline-body").forEach(item => {
       item.removeEventListener("click", handleItemClick);
     });
+    restoreAosAttribute();
   }
 }
+
+
 
 // Initial check on page load
 checkMobileView();
