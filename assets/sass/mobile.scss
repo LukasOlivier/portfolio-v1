@@ -1,8 +1,10 @@
 @media only screen and (max-width: 60rem) {
-
-
-
- 
+  .container{
+    transform: translateX(0);
+  }
+  .timeline-body{
+    width: 15rem;
+  }
   #project-container {
     width: 80% !important;
   }
