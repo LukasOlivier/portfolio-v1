@@ -32,18 +32,3 @@ function filterProjects(filter) {
     }
   });
 }
-document.addEventListener("mousemove", (event) => {
-  const glowPointer = document.querySelector(".glow-pointer");
-
-  // Set the position of the glow pointer to the mouse coordinates
-  glowPointer.style.left = `${event.clientX}px`;
-  glowPointer.style.top = `${event.clientY}px`;
-
-  // Optional: Add an animation effect when the pointer moves
-  glowPointer.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
-
-  // Reset the glow after a short delay (adjust the delay as needed)
-  setTimeout(() => {
-    glowPointer.style.backgroundColor = "rgba(255, 255, 255, 0)";
-  }, 300);
-});
