@@ -135,7 +135,35 @@ main {
         flex-direction: row;
         gap: 2rem;
         flex-wrap: wrap;
+        margin-top: 2rem;
+        i{
+          font-size: 2.5rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          &:hover {
+            .icon-title {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        }
+        .icon-title {
+          visibility: hidden;
+          color: #fff;
+          text-align: center;
+          font-size: 1rem;
+          position: absolute;
+          z-index: 1;
+          opacity: 0;
+          transition: opacity 0.3s;
+          font-family: 'Poppins', sans-serif;
+          margin-top: 4rem;
+        }
       }
+
+      
     }
     #person-idea {
       width: 30vw;
@@ -143,3 +171,5 @@ main {
     }
   }
 }
+
+
