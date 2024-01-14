@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Staatliches&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: white;
   text-decoration: none;
@@ -22,11 +26,9 @@ em {
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   font-family: Poppins, sans serif;
   color: white;
-  background: #09192f;
+  background: linear-gradient(135deg, #001229, #001325);
   display: flex;
   flex-direction: column;
   scroll-behavior: smooth;
@@ -117,6 +119,45 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.mouse {
+  width: 30px;
+  height: 50px;
+  border: 3px solid #ffffff;
+  border-radius: 60px;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+}
+.mouse:hover {
+  cursor: pointer;
+}
+.mouse::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 2s infinite;
+  -webkit-animation: wheel 2s infinite;
+}
+
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 60px;
+  }
+}
+@-webkit-keyframes wheel {
+  to {
+    opacity: 0;
+    top: 60px;
+  }
+}
 @media only screen and (max-width: 60rem) {
   .container {
     transform: translateX(-2rem) !important;
@@ -330,6 +371,10 @@ main #about-me div #skills i {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+main #about-me div #skills i:hover {
+  transform: translate(0, -0.5rem);
 }
 main #about-me div #skills i:hover .icon-title {
   visibility: visible;

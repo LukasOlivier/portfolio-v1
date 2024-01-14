@@ -60,7 +60,6 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -85,30 +84,35 @@
     </header>
     <main>
       <section id="home">
-        <h1 class="hidden animate-left">Lukas Olivier</h1>
-        <h2 class="hidden animate-left"></h2>
-        <button class="hidden animate-up">
+        <h1 data-aos="fade-down">Lukas Olivier</h1>
+        <h2 data-aos="fade-down"></h2>
+        <button data-aos="fade-right">
           <a target="_blank" href="https://blog.lukasolivier.be/"
             >Check my blog!</a
           >
         </button>
         <img
-          class="hidden animate-up shape"
+          data-aos="zoom-in-down"
+          class="shape"
           src="images/pattern4.png"
           alt="swiggle"
           id="swiggle"
         />
         <img
-          class="hidden animate-left shape"
+          data-aos="zoom-in-left"
+          class="shape"
           src="images/pattern5.png"
           alt="pattern"
           id="pattern"
         />
+
+        <a  data-aos="fade-up" class="mouse" href="#about-me"></a>
       </section>
+
       <section id="about-me">
         <div>
-          <h1 class="hidden animate-up">About me</h1>
-          <div class="hidden animate-left">
+          <h1 data-aos="fade-right">About me</h1>
+          <div data-aos="fade-right">
             <p>
               I am a 20-year-old software engineering student, deeply passionate
               about programming and technology. In addition to my studies, I
@@ -282,7 +286,12 @@
             </ul>
           </div>
         </div>
-        <img id="person-idea" src="images/person.png" alt="person idea" />
+        <img
+          data-aos="flip-right"
+          id="person-idea"
+          src="images/person.png"
+          alt="person idea"
+        />
       </section>
       <section id="project-container">
         <h2>My Projects</h2>
@@ -306,13 +315,14 @@
         <div class="container">
           <div class="timeline">
             <div
-              class="info timeline-container primary hidden animate-left"
+              data-aos="fade-right"
+              class="info timeline-container primary"
               id="brandy"
             >
               <div class="timeline-icon">
                 <i class="fa-solid fa-calendar-check"></i>
               </div>
-              <div class="timeline-body">
+              <div data-aos="fade-right" class="timeline-body">
                 <h4 class="timeline-title">
                   <div class="badge-container">
                     <span class="badge">Eventiz</span>
@@ -423,7 +433,8 @@
               </div>
             </div>
             <div
-              class="success timeline-container primary hidden animate-left"
+              data-aos="fade-right"
+              class="success timeline-container primary"
               id="blog"
             >
               <div class="timeline-icon">
@@ -492,7 +503,8 @@
               </div>
             </div>
             <div
-              class="orange timeline-container primary hidden animate-left"
+              data-aos="fade-right"
+              class="orange timeline-container primary"
               id="brandy"
             >
               <div class="timeline-icon">
@@ -550,7 +562,8 @@
               </div>
             </div>
             <div
-              class="timeline-container primary hidden animate-left"
+              data-aos="fade-right"
+              class="timeline-container primary"
               id="tappd"
             >
               <div class="timeline-icon">
@@ -603,7 +616,8 @@
               </div>
             </div>
             <div
-              class="red timeline-container primary hidden animate-left"
+              data-aos="fade-right"
+              class="red timeline-container primary"
               id="mars"
             >
               <div class="timeline-icon">
@@ -668,7 +682,8 @@
               </div>
             </div>
             <div
-              class="timeline-container success hidden animate-left"
+              data-aos="fade-right"
+              class="timeline-container success"
               id="monopoly"
             >
               <div class="timeline-icon">
@@ -727,7 +742,8 @@
               </div>
             </div>
             <div
-              class="timeline-container red hidden animate-left"
+              class="timeline-container red"
+              data-aos="fade-right"
               id="homeserver"
             >
               <div class="timeline-icon">
@@ -824,7 +840,8 @@
               </div>
             </div>
             <div
-              class="timeline-container orange hidden animate-left"
+              class="timeline-container orange"
+              data-aos="fade-right"
               id="portfolio"
             >
               <div class="timeline-icon">
@@ -890,7 +907,8 @@
               </div>
             </div>
             <div
-              class="timeline-container primary hidden animate-left"
+              data-aos="fade-right"
+              class="timeline-container primary"
               id="cocktailmaker"
             >
               <div class="timeline-icon">
@@ -994,5 +1012,10 @@
         </ul>
       </div>
     </footer>
+    <div class="glow-pointer"></div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

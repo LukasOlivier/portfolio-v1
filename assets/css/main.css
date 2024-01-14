@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: white;
   text-decoration: none;
@@ -21,11 +25,9 @@ em {
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   font-family: Poppins, sans serif;
   color: white;
-  background: #09192f;
+  background: linear-gradient(135deg, #001229, #001325);
   display: flex;
   flex-direction: column;
   scroll-behavior: smooth;
@@ -114,4 +116,44 @@ body {
 }
 .list li {
   margin-bottom: 0.5rem;
+}
+
+.mouse {
+  width: 30px;
+  height: 50px;
+  border: 3px solid #ffffff;
+  border-radius: 60px;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+}
+.mouse:hover {
+  cursor: pointer;
+}
+.mouse::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 2s infinite;
+  -webkit-animation: wheel 2s infinite;
+}
+
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 60px;
+  }
+}
+@-webkit-keyframes wheel {
+  to {
+    opacity: 0;
+    top: 60px;
+  }
 }/*# sourceMappingURL=main.css.map */
