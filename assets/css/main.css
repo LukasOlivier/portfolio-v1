@@ -58,42 +58,27 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.mouse {
-  width: 30px;
-  height: 50px;
-  border: 3px solid #ffffff;
-  border-radius: 60px;
+.arrow {
+  transform: translateY(0) rotate(45deg);
+  display: inline-block;
   position: absolute;
-  left: 50%;
-  bottom: 10%;
-}
-.mouse:hover {
-  cursor: pointer;
-}
-.mouse::before {
-  content: "";
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #ffffff;
-  border-radius: 50%;
-  opacity: 1;
-  animation: wheel 2s infinite;
-  -webkit-animation: wheel 2s infinite;
+  bottom: 5rem;
+  margin-left: 3rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-bottom: solid white;
+  border-right: solid white;
+  animation: quickBounce 1s infinite;
 }
 
-@keyframes wheel {
-  to {
-    opacity: 0;
-    top: 60px;
+@keyframes quickBounce {
+  0% {
+    transform: translateY(0) rotate(45deg);
   }
-}
-@-webkit-keyframes wheel {
-  to {
-    opacity: 0;
-    top: 60px;
+  50% {
+    transform: translateY(-0.5rem) rotate(45deg);
+  }
+  100% {
+    transform: translateY(0) rotate(45deg);
   }
 }/*# sourceMappingURL=main.css.map */

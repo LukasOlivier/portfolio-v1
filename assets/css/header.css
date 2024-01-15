@@ -18,6 +18,7 @@ p {
   font-weight: 200;
   line-height: 1.2rem;
   margin-bottom: 0.5rem;
+  font-family: "Inter", sans-serif;
 }
 
 em {
@@ -57,45 +58,18 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.mouse {
-  width: 30px;
-  height: 50px;
-  border: 3px solid #ffffff;
-  border-radius: 60px;
+.arrow {
+  transform: rotate(45deg);
+  display: inline-block;
   position: absolute;
-  left: 50%;
-  bottom: 10%;
-}
-.mouse:hover {
-  cursor: pointer;
-}
-.mouse::before {
-  content: "";
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #ffffff;
-  border-radius: 50%;
-  opacity: 1;
-  animation: wheel 2s infinite;
-  -webkit-animation: wheel 2s infinite;
+  bottom: 5rem;
+  width: 1rem;
+  height: 1rem;
+  border-bottom: solid white;
+  border-right: solid white;
+  font-size: 2rem;
 }
 
-@keyframes wheel {
-  to {
-    opacity: 0;
-    top: 60px;
-  }
-}
-@-webkit-keyframes wheel {
-  to {
-    opacity: 0;
-    top: 60px;
-  }
-}
 @media only screen and (max-width: 60rem) {
   .container {
     transform: translateX(0);
