@@ -17,10 +17,19 @@ function handleItemClick(event) {
   }
 }
 
-function attachEventListeners() {
+function hideTimelineContent() {
   document.querySelectorAll(".timeline-content").forEach(item => {
     item.classList.add("hidden");
   });
+}
+
+function showTimelineContent() {
+  document.querySelectorAll(".timeline-content").forEach(item => {
+    item.classList.remove("hidden");
+  });
+}
+
+function attachEventListeners() {
   document.querySelectorAll(".timeline-body").forEach(item => {
     item.addEventListener("click", handleItemClick);
   });
@@ -47,11 +56,13 @@ function checkMobileView() {
   if (window.innerWidth < mobileThreshold) {
     attachEventListeners();
     removeAosAttribute();
+    hideTimelineContent();
   } else {
     document.querySelectorAll(".timeline-body").forEach(item => {
       item.removeEventListener("click", handleItemClick);
     });
     restoreAosAttribute();
+    showTimelineContent();
   }
 }
 
