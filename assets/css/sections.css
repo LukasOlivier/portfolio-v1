@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Staatliches&display=swap");
 html {
   scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
 a {
@@ -60,7 +61,7 @@ body {
 }
 
 .arrow {
-  transform: rotate(45deg);
+  transform: translateY(0) rotate(45deg);
   display: inline-block;
   position: absolute;
   bottom: 5rem;
@@ -69,8 +70,20 @@ body {
   height: 1.5rem;
   border-bottom: solid white;
   border-right: solid white;
+  animation: quickBounce 1s infinite;
 }
 
+@keyframes quickBounce {
+  0% {
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateY(-0.5rem) rotate(45deg);
+  }
+  100% {
+    transform: translateY(0) rotate(45deg);
+  }
+}
 @media only screen and (max-width: 60rem) {
   .container {
     transform: translateX(0);
