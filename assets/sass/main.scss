@@ -65,15 +65,20 @@ body {
 
 .arrow{
   transform: translateY(0) rotate(45deg);
-  display: inline-block;
-  position: absolute;
-  bottom: 5rem;
-  margin-left: 3rem;
   width: 1.5rem;
   height: 1.5rem;
   border-bottom: solid white;
   border-right: solid white;
   animation: quickBounce 1s infinite;
+  display: inline-block;
+}
+
+.arrow-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 75%;
 }
 
 @keyframes quickBounce{
