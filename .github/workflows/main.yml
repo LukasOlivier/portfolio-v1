@@ -28,10 +28,10 @@ jobs:
             # Check if the Docker container exists
             if docker ps -a --format '{{.Names}}' | grep portfolio; then
               echo "Container exists, restarting..."
-              docker-compose restart
+              docker compose restart
             else
               echo "Container does not exist, creating a new one..."
-              docker-compose up -d
+              docker compose up -d
             fi
           host: '${{ secrets.HOST }}'
           username: '${{ secrets.USERNAME }}'
