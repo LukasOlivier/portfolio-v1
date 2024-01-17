@@ -19,29 +19,21 @@ jobs:
           key: "${{ secrets.SSH_KEY }}"
           script: 'echo "SSH connection successful."'
 
-      - name: Check if Docker Container Exists
-        id: check-container
-        run: |
-          if docker ps -a | grep portfolio; then
-            echo "Container exists"
-            echo "::set-output name=container_exists::true"
-          else
-            echo "Container does not exist"
-            echo "::set-output name=container_exists::false"
-          fi
-
       - name: Deploy via SSH
         uses: tiyee/action-ssh@v1.0.1
         with:
           command: |
             cd /home/docker/stacks/portfolio
-            git pull
-            if [ "${{ steps.check-container.outputs.container_exists }}" == "true" ]; then
-              docker restart portfolio
+      
+            # Check if the Docker container exists
+            if docker ps -a --format '{{.Names}}' | grep portfolio; then
+              echo "Container exists, restarting..."
+              docker-compose restart
             else
-              docker run -d --name portfolio -p 80:80 your-docker-image:tag
+              echo "Container does not exist, creating a new one..."
+              docker-compose up -d
             fi
-            host: '${{ secrets.HOST }}'
-            username: '${{ secrets.USERNAME }}'
-            port: '${{ secrets.PORT }}'
-            privateKey: "${{ secrets.SSH_KEY }}
+          host: '${{ secrets.HOST }}'
+          username: '${{ secrets.USERNAME }}'
+          port: '${{ secrets.PORT }}'
+          privateKey: "${{ secrets.SSH_KEY }}"
