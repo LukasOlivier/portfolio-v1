@@ -27,14 +27,21 @@ jobs:
       
             # Check if the Docker container exists
             if docker ps -a --format '{{.Names}}' | grep -q portfolio; then
-              echo "Container exists, restarting..."
-              docker-compose restart
+              # Check if the container is running
+              if docker inspect -f '{{.State.Running}}' portfolio | grep -q true; then
+                echo "Container is running, restarting..."
+                docker compose restart
+              else
+                echo "Container is stopped, starting..."
+                docker compose up -d
+              fi
             else
-              echo "Container does not exist, creating a new one..."
-              docker-compose up -d
+              echo "Error: Container does not exist."
+              exit 1
             fi
           host: '${{ secrets.HOST }}'
           username: '${{ secrets.USERNAME }}'
           port: '${{ secrets.PORT }}'
           privateKey: "${{ secrets.SSH_KEY }}"
+
 
