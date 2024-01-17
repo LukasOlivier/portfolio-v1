@@ -13,9 +13,9 @@ jobs:
       - name: Check SSH Connection
         uses: appleboy/ssh-action@master
         with:
-          host: '141.134.173.203'
-          username: 'raspberry'
-          port: '22'
+          host: '${{ secrets.HOST }}'
+          username: '${{ secrets.USERNAME }}'
+          port: '${{ secrets.PORT }}'
           key: "${{ secrets.SSH_KEY }}"
           script: 'echo "SSH connection successful."'
 
@@ -23,7 +23,7 @@ jobs:
         uses: tiyee/action-ssh@v1.0.1
         with:
           command: 'shopt -s dotglob && rm -rf /home/raspberry/portfolio/website/* && cd /home/raspberry/portfolio/website && git clone https://github.com/LukasOlivier/portfolio.git . && docker stop portfolio && docker rm portfolio && docker compose up -d'
-          host: '141.134.173.203'
-          username: 'raspberry'
-          port: '22'
+          host: '${{ secrets.HOST }}'
+          username: '${{ secrets.USERNAME }}'
+          port: '${{ secrets.PORT }}'
           privateKey: "${{ secrets.SSH_KEY }}"
