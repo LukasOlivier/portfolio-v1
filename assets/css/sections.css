@@ -75,7 +75,8 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 75%;
+  margin-top: 65%;
+  height: 10rem;
 }
 
 @keyframes quickBounce {
