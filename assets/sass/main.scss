@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
 $bold-font:
@@ -33,9 +34,6 @@ body {
   font-family: $bold-font;
   color: white;
   background: linear-gradient(135deg, #001229, #001325);
-
-
-
   display: flex;
   flex-direction: column;
   scroll-behavior: smooth;
