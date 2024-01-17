@@ -22,8 +22,19 @@ jobs:
       - name: Deploy via SSH
         uses: tiyee/action-ssh@v1.0.1
         with:
-          command: 'cd /home/docker/stacks/portfolio && git pull && docker restart portfolio'
+          command: |
+            cd /home/docker/stacks/portfolio
+      
+            # Check if the Docker container exists
+            if docker ps -a --format '{{.Names}}' | grep -q portfolio; then
+              echo "Container exists, restarting..."
+              docker-compose restart
+            else
+              echo "Container does not exist, creating a new one..."
+              docker-compose up -d
+            fi
           host: '${{ secrets.HOST }}'
           username: '${{ secrets.USERNAME }}'
           port: '${{ secrets.PORT }}'
           privateKey: "${{ secrets.SSH_KEY }}"
+
